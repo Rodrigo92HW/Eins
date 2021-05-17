@@ -1,0 +1,2426 @@
+<!-- Paginas extras -->
+    <div>
+      <button type="action" name="act_personajep" class="attr_showpages" >Personaje</button>
+      <button type="action" name="act_trasfondosyt" class="attr_showpages" >Trasfondos y Tecnicas</button>
+      <button type="action" name="act_hojacombate" class="attr_showpages" >Hoja de Combate</button>
+      <button type="action" name="act_objetosydatos" class="attr_showpages" >Objetos y Notas</button>
+      <button type="action" name="act_extras" class="attr_showpages" >Extras</button>
+  </div>
+  <input type="hidden" class="sheet-tabstoggle" name="attr_sheetTab"  value="personajep"  />
+  
+<!--Hoja de Personaje-->
+<div class="sheet-personajep">
+  <div class="main">
+ 
+    <div class="name-section">
+      <div class="col">
+          <div class="col"><label class="nombre">Nombre<input class="name" type="text" name="attr_nombre" placeholder="Nombre Completo" /></div>
+          <div class="col lvlexpph"><label class="lvlexpph">Nivel</label><input class="level" type="number" name="attr_nivel" placeholder="0" /></div>
+          <div class="col lvlexpph"><label class="lvlexpph">EXP</label><input class="exp" type="number" name="attr_xp" placeholder="0" /></div>
+          <div class="col lvlexpph2"><label class="lvlexpph">PH</label><input class="ph" type="number" name="attr_ph" placeholder="0" /></div>
+      </div>
+      <div class="col">
+          <div class="col"><label>Altura</label><input class="altura" type="number" name="attr_altura" placeholder="Altura en CM" />Cm.</div>
+          <div class="col"><label>Peso</label><input class="peso" type="number" name="attr_peso" placeholder="Peso en KG" />Kg.</div>
+          <div class="col"><label>Sexo</label><select class="sexo" name="attr_sexoper" placeholder="M/F/O">
+            <option value="Z">(Elegir)</option>  
+                <option value="F">Hombre</option>
+                  <option value="M">Mujer</option>
+                  <option value="O">Otro</option>
+              </select></div>
+          <div class="col"><label>Ojos</label><input class="ojos" type="text" name="attr_ojoscolor" placeholder="Color" /></div>
+          <div class="col"><label>Cabellos</label><input class="pelo" type="text" name="attr_pelocolor" placeholder="Color/Largo" /></div>
+      </div>
+
+      <div class="raza">
+          <div class="row"><label>Raza</label><select name="attr_raza1" class="razas">
+                  <option value="-" selected>(Elegir)</option>
+                  <option value="Los Alps ganan un nivel adicional en Empatía, Hechicería, y Ocultismo, pero pierden un nivel en Supervivencia. Los Alps tienen la posibilidad de ingresar en los sueños de la gente, mientras se encuentren en estos podrán conocer verdades de las personas sumando +15 a sus tiradas de Empatía, podrán además traer un objeto de los sueños de las personas una vez por semana de un coste de Oro igual a 2d10 x Nivel.">Alp</option>
+                  <option value="Los ángeles ganan un nivel adicional en Empatía y Teología, pero pierden un nivel en Subterfugio. A su vez los ángeles al momento de realizar cualquier tirada curativa, sumaran a esta su Nivel del Personaje + 1, empezaran con la ventaja “Alas” (si no la desean obtendrán 5 PH) y obtendrán un bonus de daño igual a su estadística más alta.">Angel</option>
+                  <option value="Las bestias mágicas ganan un nivel adicional en Atletismo, Alerta y Trato con Animales, pero pierden un nivel en Equitación. A su vez ganan un PE adicional en cualquier estadística de Cuerpo, suman cualquier estadística de Cuerpo a su movimiento una vez adicional y lanzan un dado adicional en la tirada de daño.">Bestia Magica</option>
+                  <option value="Los Steam-Punk/Cyborg ganan un nivel adicional en dos de estas habilidades: Mecánica, Herrería, Informática, Investigación y Pericias pero pierden un nivel en Armas. A su vez podrán elegir dos mejoras de equipo y obtenerlas de forma gratuita y permanente (el coste será determinado por el Master), y cada tres niveles podrán agregar una mejora adicional, siempre que puedan costearla claro está (no podrás obtener la mejora de que no se repitan los 0 contra ti, o la de que en tu tirada de daño repites los 9)">Cyborg</option>
+                  <option value="Los demonios ganan un nivel adicional en Subterfugio y Ocultismo, pero pierden un nivel en Teología. A su vez los demonios ganan un PE adicional en Entendimiento o Carisma, obtendrá la ventaja “Visión Nocturna” (si no la desean obtendrán 3 PH) y guardan un dado adicional en las tiradas de daño.">Demonio</option>
+                  <option value="Los Genios ganan un nivel adicional en dos de estas habilidades: Hechicería, Ocultismo, Cultura, Subterfugio o Empatía. Además de estos los genios tendrá el poder de conceder hasta 4 deseos (funcionaran como el hechizo Wish pero sin su limitación de tiempo o tirada) pero deberán concederlo a alguien más.">Djin</option>
+                  <option value="Los draconicos ganan un nivel adicional en dos habilidades a elección. A su vez guardan un dado adicional en las tiradas de un elemento a elección y poseen un PE adicional en Constitución o Entendimiento.">Draconico</option>
+                  <option value="Los dullahan ganan un nivel adicional en Equitación, Ocultismo y Armas, pero pierden un nivel en Medicina y Etiqueta. Estos empiezan con un arma especial, una “Guadaña” (o arma a decisión del GM), esta se considera de calidad excelente y pueden realizar tanto daño físico como mágico a elección del dullahan, esta puede ser invocada desde cualquier sombra (a menos que te desarmen de esta). Puede además convocar a una “Montura Oscura” que posee las estadísticas de un caballo, pero no puede ser destruido y tiene 6 de Destreza en lugar de 4; y más tarde si encontrase un caballo o montura mejor puede establecer a este como su compañero predilecto. Además, lanza un dado adicional en precisión mientras se encuentra montado.">Dullahan</option>
+                  <option value="Los elementales ganan un nivel adicional en Hechicería y Ocultismo, pero pierden un nivel en Liderazgo. A su vez guardan un dado adicional de daño en las tiradas del elemento del que provengan, reducirá el coste de comprar y usar estos en 1 o 2 PH y MP (1: 0-6, 2: 9-X) y además reducirá el daño recibo de este en un dado (guardado). Pero reciben un dado adicional (guardado) de un elemento a elección del Master.">Elemental</option>
+                  <option value="Los elfos ganan un nivel adicional en Supervivencia y Alerta, pero pierden un nivel en Defensa. A su vez los elfos obtendrá la ventaja “Visión Nocturna” (si no la desean obtendrán 3 PH) y reciben un bonus adicional si se encontrasen en su ambiente natural (Por Ej: bosques, montaña, mar, etc.) ganando un nivel adicional en Sigilo, Alerta, Trato con Animales, Armas y Supervivencia.">Elfo</option>
+                  <option value="Los enanos ganan un nivel adicional en dos de estas habilidades: Comercio, Herrería e Investigación, pero pierden un nivel en Atletismo. A su vez ganaran un nivel adicional en una Arma a elección, guardan un dado adicional en sus tiradas de daño con estas y poseen un PE adicional en Fuerza o Constitución.">Enano</option>
+                  <option value="Los Ent obtienen un nivel adicional en tres de estas habilidades: Supervivencia, Trato con Animales, Medicina, Venenos e Intimidación, pero pierden un nivel en Comercio. Los Ents ganaran la habilidad de recuperar toda su HP, MP y EP una vez por día descansando por 30 minutos en la naturaleza, pueden comunicarse con otras plantas las cuales podrán responder preguntas simples (a menos que sea una planta mágica o muy antigua) estas no están obligadas a responder pero serán tendientes a ayudarte; a su vez obtienen un punto de estadística adicional en Constitución o Entendimiento.">Ent</option>
+                  <option value="Las esfinges ganan un nivel en Academicismo y una de estas habilidades: Alquimia, Ocultismo, Cultura, Teología o Medicina, pero pierden un nivel en Subterfugio y Cocina. Empiezan con la ventaja Alas (si no la desean obtendrán 5 PH), y además paras las esfinges los acertijos que acarrean consigo son grandes fuentes de poder, siempre y cuando nadie responda a estos la esfinge ganara un dado en todas las tiradas de la batalla.">Esfinges</option>
+                  <option value="Los espíritus ganan un nivel adicional en Ocultismo y Sigilo. A su vez poseen la ventaja Medium (si no la desean obtendrán 1 PH) y el poder de atravesar paredes y objetos gastando 1 de Energía por segundo multiplicado por la cantidad de personas transportadas con él. Además de esto, podrá emplear esta habilidad para esquivar los ataques físicos en combate usando un único Nivel de Energía.">Espíritu</option>
+                  <option value="Los fénix ganan un nivel adicional en tres de estas habilidades: Liderazgo, Teología, Ocultismo y Hechicería, pero pierden un nivel en Comercio y Cocina. A su vez cuando un fénix es reducido en 12 Niveles de HP en lugar de hacer una Tirada de Salvación podrá elegir convertirse en un “Huevo de Fénix” tendrá HP como el doble de su máxima vida y tanta Armadura como el doble de la normal (con un mínimo de 10 de Armadura, para esto contara el equipo) y al pasar 1d20+1 horas vuelve a la vida con su HP completamente recuperada, pero mientras se encuentre en forma de huevo resta 3 a sus tiradas de salvación. Además de esto, guardan un dado más en las tiradas de daño de luz y fuego, pero reciben un dado (guardado) de daño adicional de hielo y oscuridad. Durante el día también podrás descansar bajo la luz del sol por 30 minutos una vez por día y recuperar la totalidad de tu HP.">Fenix</option>
+                  <option value="Las gárgolas ganan un nivel adicional en Alerta, Defensa y Armas, pero pierden un nivel en Liderazgo y Empatía. Obtén 1 punto adicional de Armadura y Resistencia Mágica por cada nivel en Constitución y Fe respectivamente, empieza con la ventaja “Visión Nocturna” (si no la desean obtendrán 4 PH) y “Alas” (si no la desean obtendrán 5 PH), pero en cambio sí se quedan bajo el sol por una hora se volverán de piedra, en cuyo caso contará como “Edificación” a la hora de calcular resistencia, pero no podrá actuar, aunque será consciente de su entorno. A su vez, estos duermen con los ojos abiertos eliminado penalizadores de Alerta al estar dormidos.">Gargola</option>
+                  <option value="Los gigantes ganan un nivel adicional en Intimidación, Defensa y Armas (Armas Pesadas), pero pierden un nivel en Equitación y Trato con Animales. Estos ganaran un PE adicional en Fuerza o Constitución, ganaran un dado en sus tiradas de daño físico, sumaran uno a su movimiento final, y solo podrán usar ciertos tipos de armas y armaduras hechos especialmente para ellos.">Gigante</option>
+                  <option value="Los gnomos ganan un nivel adicional en dos de estas habilidades: Comercio, Herrería, Investigación y Alquimia, pero pierden un nivel en Defensa. Los gnomos podrán realizar ilusiones del tamaño de su puño que podrán mover objetos que pesen tanto como su Nivel x 10 Kilos y disminuye la dificultad de cualquier cosa que estos construyan en 10 (20 a nivel 5). A su vez reciben un bonus de oro al completar las misiones o al encontrar cofres de tesoro igual a un 50% más que las otras razas (inclusive el oro entregado al principio de la roleada), además ganaran un dado en las tiradas relacionadas en encontrar tesoros u oro.">Gnomo</option>
+                  <option value="Las hadas ganan un nivel adicional en Hechicería y Sigilo, pero pierden un nivel en Intimidación. A su vez las hadas ganan 6.5 puntos de Evasión por cada punto en Destreza, obtienen un PE en Entendimiento o Destreza y empezaran con la ventaja Alas (si no la desean obtendrán 5 PH) y solo podrán usar ciertos tipos de armas y armaduras hechos especialmente para ellas.">Hada</option>
+                  <option value="Los humanos ganan un nivel en dos de estas habilidades: Comercio, Supervivencia, Teología o Alquimia, pero pierden un nivel en Trato con Animales. A su vez, los humanos reciben 2 Puntos de Habilidad y 1 Punto de Experiencia adicional por sesión">Humano</option>
+                  <option value="Los insctoides ganan un nivel adicional en Supervivencia y pierden un nivel en Cultura, y las siguientes habilidades Sigilo y Mano a Mano (Asesino), pueden usar sus garras como armas usando Destreza para el daño y guardan un dado extra en la tirada de daño. Puedes aplicar Veneno a tus garras y resta -10 a la tirada del enemigo para resistirla.">Insectoide Asesino</option>
+                  <option value="Los insctoides ganan un nivel adicional en Supervivencia y pierden un nivel en Cultura, y las siguientes habilidades Defensa y Arma de Asedio (Bombardero), empezaran con la ventaja “Alas” (si no la desean obtendrán 5 PH), funcionan como Armas de Asedio, pudiendo usar municiones creadas en su cuerpo, realizan Fuerza k3 (+0k1 cada 2 niveles) en un área de 3x3, pero restan -10 a su Precisión con estas.">Insectoide Bombardero</option>
+                  <option value="Los insctoides ganan un nivel adicional en Supervivencia y pierden un nivel en Cultura, y las siguientes habilidades Pericias y Alerta (Obrero), empezaran con las ventajas “Infatigable” (si no la desean obtendrán 1 PH), e “Instintos” (si no la desean obtendrán 3 PH), sus creaciones se consideran de un nivel superior y sus trampas cuentan como si tuviera su puntuación en Supervivencia 2 niveles más alto. Otorga 6 de Armadura.">Insectoide Obrero</option>
+                  <option value="Los kitsunes ganan un nivel adicional en tres de estas habilidades: Academicismo, Ocultismo, Subterfugio, Hechicería, Medicina, Veneno y Trato con Animales pero pierden un nivel en Equitación. Y al crear el personaje podrán elegir si sumar a todas sus tiradas de Sociales o Conocimientos su Nivel de Personaje + 3.">Kitsune</option>
+                  <option value="Los licántropos ganan un nivel adicional en tres de estas habilidades: Supervivencia, Trato con Animales, Intimidación, Atletismo y Comercio, pero pierden un nivel en Etiqueta y Pericias. Los licántropos pueden o “Convertirse” o permanecer constantemente en su forma de lobo, mientras están en esta, ganan un dado adicional en las tiradas de daño físico, suman cualquiera de sus Estadísticas de Cuerpo a su movimiento una vez adicional y si solo poseen un Nivel de HP tendrán dos turnos en combate en lugar de uno. Sin embargo, en las noches de luna llena obtendrán de manera pasivo esto último, pero deben hacer una tirada de Fe (Dificultad= 25 –puede subir-) para evitar perder el control.">Licantropo</option>
+                  <option value="Las medusas ganan un nivel adicional en Hechicería, Intimidación y Trato con Animales. Las medusas empiezan con la ventaja Visión 360° (si no la desean obtendrán 5 PH), ganan un nivel de Entendimiento o Carisma, y además las medusas llevan consigo el poder de petrificar a su víctima cuando estas sean miradas directamente a los ojos. Para esto la medusa debe primero realizar una tirada de Precisión usando su Carisma o Entendimiento únicamente para la tirada (guarda tantos dados como tira) y si lo supera su oponente debe lanzar 1d10 y en esa cantidad de turnos, si no logra derrotar a la medusa, este se petrificará. Esta habilidad solo puede ser usada tantas veces como el nivel del personaje más uno (no contando fallo para usos), pero si esta habilidad es reflejada por cualquier medio la medusa se petrificará en 1d10 rondas.">Medusa</option>
+                  <option value="Los mimic ganan un nivel adicional en Sigilo y Subterfugio, pero pierden un nivel en Trato con Animales y Etiqueta. A su vez los mimic son capaces de transformarse en objetos de tamaño mediano o pequeño debiendo tomarse un minuto para concluir la transformación, en esta forma repite los 9 como 0 en tiradas de Sigilo y si alguien los toca pueden realizar un ataque y un agarre, repitiendo los 9 como 0 en ambas tiradas (no de daño). Además del daño realizado deberá lanzar 2d4 para determinar el daño a la armadura equipada o al arma si no posee armadura; y aumenta en +10 la dificultad de soltarse de sus agarres.">Mimic</option>
+                  <option value="Los orcos ganan un nivel adicional en Intimidación y Armas (a elección) o Hechicería, pero pierden un dado en Etiqueta. A su vez, guardan un dado adicional en las tiradas de daño, si pierden dos Niveles de HP guardaran otro dado adicional y uno más si solo les queda un Nivel de HP. Y la primera vez que fueran a caer inconscientes en combate en lugar de eso se mantienen en 1 de HP y tendrán éxito en su primera Tirada de Salvación">Orco</option>
+                  <option value="Los Slimes ganan un nivel adicional en dos de estas habilidades: Alquimia, Venenos, Empatía y Medicina, pero pierden un nivel en Cultura. A diferencia del resto de las razas estos no tendrán Energía, solo Vida y Mana, la mitad de su puntuación en Espíritu se suma a cada nivel de HP de estos. Además podrán pagar los skills con MP, pagando la mitad de EP que tendrían que pagar normalmente.">Slime</option>
+                  <option value="Los stella ganan un nivel adicional en dos de estas habilidades: Teología, Ocultismo y Hechicería, pero pierden un nivel en Supervivencia. Lanza un dado adicional en las tiradas de daño de Oscuridad o Luz, guardando un dado adicional si es día para los de luz, o para oscuridad si es de noche, además de esto recuperan 5 (10 a nivel 5) de HP por el daño producido con estos durante el momento correcto del día.">Stella</option>
+                  <option value="Los tritones ganan un nivel adicional en dos de estas habilidades: Academicismo, Alquimia o Investigación, pero pierden un nivel en Atletismo (pero pierden esta desventaja y ganan un dado cuando se encuentran en el agua). A su vez los tritones tienen una piel escamosa muy resistente que otorga a estos 8 Armadura y podrán respirar bajo además de duplicar su movimiento en esta, pero en tierra pierden uno de movimiento. Además de esto podrás usar un hermoso canto para distraer a tus enemigos, lanza 1d10+ Interpretación o Carisma contra su Espíritu, si los superas perderán 10 de Evasión.">Triton</option>
+                  <option value="Los trolls ganan un nivel adicional en Supervivencia, Armas (Arcos o Ballestas) y Medicina. A su vez estos poseen una regeneración sobrenatural teniendo la posibilidad de en combate gastar de 5 EP para recuperar un Nivel de HP, y obtienen la ventaja Curación Rápida (si no la desean obtendrán 1 PH).">Trol</option>
+                  <option value="Los unicornios ganan un nivel adicional Hechicería, Empatía y Atletismo, pero pierden un nivel en Subterfugio. Siempre que estos realicen una buena acción, traigan risas o felicidad, o por otras acciones en las que el Master así lo ameritase, ganaran “Contadores de Alegría”. Estos contadores pueden gastarse para ganar dados en cualquier tirada de personaje, el jugador podrá utilizar tantos dados como desee (1 Contador= 1 Dado Ganado). Además de esto, suman su Destreza a su movimiento y puede también, gastar 2 de MP, derramar lágrimas sobre un aliado o tocarlo con su cuerno para recuperar 10 (15 a nivel 5) de HP a este.">Unicornio</option>
+                  <option value="Las valkyrias ganan un nivel adicional en dos de estas habilidades: Armas (a elección), Defensa, Teología o Batalla. A su vez podrán gastar una Acción Menor luego de atacar o curar para recuperar HP de todos sus aliados igual a su puntuación en Arma, Defensa o Batalla.">Valkiria</option>
+                  <option value="Los vampiros ganan un nivel adicional en tres de estas habilidades: Cultura, Etiqueta, Ocultismo, Cocina, Empatía o Subterfugio, pero pierden un nivel en Teología. A su vez los vampiros empiezan con un PE adicional en Carisma y recuperan 5 (10 a nivel 5) de HP por el daño producido. A su vez tendrán la posibilidad de recuperar 3 Niveles de HP tomando la sangre del cuello de un personaje, pero son extremadamente débiles a la luz solar, solo pueden permanecer bajo esta por cortos periodos (veinte minutos por nivel de personaje + 20), no poseen reflejo.">Vampiro</option>
+                  <option value="Las Yuki-Onna ganan un nivel en Empatía y pierden un nivel en Sigilo, además ganan las siguientes habilidades y Lingüística y Subterfugio (Hielo), empieza con la ventaja Glamoroso (si no la desean obtendrán 5 PH), estas además tienen el poder de caminar sobre el agua convirtiendo el suelo por donde caminan en hielo, y gana un dado adicional en las tiradas de daño que realiza daño de hielo.">Yuki-Onna Hielo</option>
+                  <option value="Las Yuki-Onna ganan un nivel en Empatía y pierden un nivel en Sigilo, además ganan las siguientes habilidades Comercio y Etiqueta (Luna), empieza con la ventaja Glamoroso (si no la desean obtendrán 5 PH), cuando sea de noche estas ganan Nivel de Personaje Nivel de Personaje + 3 en todas sus tiradas de Conocimiento, Sociales o Proezas (elegir en la creación).">Yuki-Onna Luna</option>
+                  <option value="Las Yuki-Onna ganan un nivel en Empatía y pierden un nivel en Sigilo, además ganan las siguientes habilidades Atletismo y Mano a Mano (Vampiro), lanzan un dado adicional en las tiradas de daño y recuperan 5 (10 a nivel 5) de HP por el daño producido, además sumara su Nivel de Personaje + 5 a las tiradas para seguir/cazar a alguien.">Yuki-Onna Vampiro</option>
+                  <option value="Los zombies ganan un nivel adicional en Intimidación y Supervivencia, pero pierden un dado en Pericias. A su vez estos poseen 11 Niveles de HP Totales, pero solo 3 Niveles Negativos, además restaran -3 a sus Tiradas de Salvación y reciben un dado (guardado) de daño adicional de fuego y sacro. Los zombies no necesitaran comer ni dormir, pero deben comer un poco de carne al menos una vez por día y descansar al menos una vez por semana.">Zombie</option>
+              </select>
+              </select>
+          </div>
+
+          <div class="row"><label>Raza Agregada</label><select name="attr_raza2" class="razas">
+                  <option value="-" selected>(Elegir)</option>
+                  <option value="Los Alps ganan un nivel adicional en Empatía, Hechicería, y Ocultismo, pero pierden un nivel en Supervivencia. Los Alps tienen la posibilidad de ingresar en los sueños de la gente, mientras se encuentren en estos podrán conocer verdades de las personas sumando +15 a sus tiradas de Empatía, podrán además traer un objeto de los sueños de las personas una vez por semana de un coste de Oro igual a 2d10 x Nivel.">Alp</option>
+                  <option value="Los ángeles ganan un nivel adicional en Empatía y Teología, pero pierden un nivel en Subterfugio. A su vez los ángeles al momento de realizar cualquier tirada curativa, sumaran a esta su Nivel del Personaje + 1, empezaran con la ventaja “Alas” (si no la desean obtendrán 5 PH) y obtendrán un bonus de daño igual a su estadística más alta.">Angel</option>
+                  <option value="Las bestias mágicas ganan un nivel adicional en Atletismo, Alerta y Trato con Animales, pero pierden un nivel en Equitación. A su vez ganan un PE adicional en cualquier estadística de Cuerpo, suman cualquier estadística de Cuerpo a su movimiento una vez adicional y lanzan un dado adicional en la tirada de daño.">Bestia Magica</option>
+                  <option value="Los Steam-Punk/Cyborg ganan un nivel adicional en dos de estas habilidades: Mecánica, Herrería, Informática, Investigación y Pericias pero pierden un nivel en Armas. A su vez podrán elegir dos mejoras de equipo y obtenerlas de forma gratuita y permanente (el coste será determinado por el Master), y cada tres niveles podrán agregar una mejora adicional, siempre que puedan costearla claro está (no podrás obtener la mejora de que no se repitan los 0 contra ti, o la de que en tu tirada de daño repites los 9)">Cyborg</option>
+                  <option value="Los demonios ganan un nivel adicional en Subterfugio y Ocultismo, pero pierden un nivel en Teología. A su vez los demonios ganan un PE adicional en Entendimiento o Carisma, obtendrá la ventaja “Visión Nocturna” (si no la desean obtendrán 3 PH) y guardan un dado adicional en las tiradas de daño.">Demonio</option>
+                  <option value="Los Genios ganan un nivel adicional en dos de estas habilidades: Hechicería, Ocultismo, Cultura, Subterfugio o Empatía. Además de estos los genios tendrá el poder de conceder hasta 4 deseos (funcionaran como el hechizo Wish pero sin su limitación de tiempo o tirada) pero deberán concederlo a alguien más.">Djin</option>
+                  <option value="Los draconicos ganan un nivel adicional en dos habilidades a elección. A su vez guardan un dado adicional en las tiradas de un elemento a elección y poseen un PE adicional en Constitución o Entendimiento.">Draconico</option>
+                  <option value="Los dullahan ganan un nivel adicional en Equitación, Ocultismo y Armas, pero pierden un nivel en Medicina y Etiqueta. Estos empiezan con un arma especial, una “Guadaña” (o arma a decisión del GM), esta se considera de calidad excelente y pueden realizar tanto daño físico como mágico a elección del dullahan, esta puede ser invocada desde cualquier sombra (a menos que te desarmen de esta). Puede además convocar a una “Montura Oscura” que posee las estadísticas de un caballo, pero no puede ser destruido y tiene 6 de Destreza en lugar de 4; y más tarde si encontrase un caballo o montura mejor puede establecer a este como su compañero predilecto. Además, lanza un dado adicional en precisión mientras se encuentra montado.">Dullahan</option>
+                  <option value="Los elementales ganan un nivel adicional en Hechicería y Ocultismo, pero pierden un nivel en Liderazgo. A su vez guardan un dado adicional de daño en las tiradas del elemento del que provengan, reducirá el coste de comprar y usar estos en 1 o 2 PH y MP (1: 0-6, 2: 9-X) y además reducirá el daño recibo de este en un dado (guardado). Pero reciben un dado adicional (guardado) de un elemento a elección del Master.">Elemental</option>
+                  <option value="Los elfos ganan un nivel adicional en Supervivencia y Alerta, pero pierden un nivel en Defensa. A su vez los elfos obtendrá la ventaja “Visión Nocturna” (si no la desean obtendrán 3 PH) y reciben un bonus adicional si se encontrasen en su ambiente natural (Por Ej: bosques, montaña, mar, etc.) ganando un nivel adicional en Sigilo, Alerta, Trato con Animales, Armas y Supervivencia.">Elfo</option>
+                  <option value="Los enanos ganan un nivel adicional en dos de estas habilidades: Comercio, Herrería e Investigación, pero pierden un nivel en Atletismo. A su vez ganaran un nivel adicional en una Arma a elección, guardan un dado adicional en sus tiradas de daño con estas y poseen un PE adicional en Fuerza o Constitución.">Enano</option>
+                  <option value="Los Ent obtienen un nivel adicional en tres de estas habilidades: Supervivencia, Trato con Animales, Medicina, Venenos e Intimidación, pero pierden un nivel en Comercio. Los Ents ganaran la habilidad de recuperar toda su HP, MP y EP una vez por día descansando por 30 minutos en la naturaleza, pueden comunicarse con otras plantas las cuales podrán responder preguntas simples (a menos que sea una planta mágica o muy antigua) estas no están obligadas a responder pero serán tendientes a ayudarte; a su vez obtienen un punto de estadística adicional en Constitución o Entendimiento.">Ent</option>
+                  <option value="Las esfinges ganan un nivel en Academicismo y una de estas habilidades: Alquimia, Ocultismo, Cultura, Teología o Medicina, pero pierden un nivel en Subterfugio y Cocina. Empiezan con la ventaja Alas (si no la desean obtendrán 5 PH), y además paras las esfinges los acertijos que acarrean consigo son grandes fuentes de poder, siempre y cuando nadie responda a estos la esfinge ganara un dado en todas las tiradas de la batalla.">Esfinges</option>
+                  <option value="Los espíritus ganan un nivel adicional en Ocultismo y Sigilo. A su vez poseen la ventaja Medium (si no la desean obtendrán 1 PH) y el poder de atravesar paredes y objetos gastando 1 de Energía por segundo multiplicado por la cantidad de personas transportadas con él. Además de esto, podrá emplear esta habilidad para esquivar los ataques físicos en combate usando un único Nivel de Energía.">Espíritu</option>
+                  <option value="Los fénix ganan un nivel adicional en tres de estas habilidades: Liderazgo, Teología, Ocultismo y Hechicería, pero pierden un nivel en Comercio y Cocina. A su vez cuando un fénix es reducido en 12 Niveles de HP en lugar de hacer una Tirada de Salvación podrá elegir convertirse en un “Huevo de Fénix” tendrá HP como el doble de su máxima vida y tanta Armadura como el doble de la normal (con un mínimo de 10 de Armadura, para esto contara el equipo) y al pasar 1d20+1 horas vuelve a la vida con su HP completamente recuperada, pero mientras se encuentre en forma de huevo resta 3 a sus tiradas de salvación. Además de esto, guardan un dado más en las tiradas de daño de luz y fuego, pero reciben un dado (guardado) de daño adicional de hielo y oscuridad. Durante el día también podrás descansar bajo la luz del sol por 30 minutos una vez por día y recuperar la totalidad de tu HP.">Fenix</option>
+                  <option value="Las gárgolas ganan un nivel adicional en Alerta, Defensa y Armas, pero pierden un nivel en Liderazgo y Empatía. Obtén 1 punto adicional de Armadura y Resistencia Mágica por cada nivel en Constitución y Fe respectivamente, empieza con la ventaja “Visión Nocturna” (si no la desean obtendrán 4 PH) y “Alas” (si no la desean obtendrán 5 PH), pero en cambio sí se quedan bajo el sol por una hora se volverán de piedra, en cuyo caso contará como “Edificación” a la hora de calcular resistencia, pero no podrá actuar, aunque será consciente de su entorno. A su vez, estos duermen con los ojos abiertos eliminado penalizadores de Alerta al estar dormidos.">Gargola</option>
+                  <option value="Los gigantes ganan un nivel adicional en Intimidación, Defensa y Armas (Armas Pesadas), pero pierden un nivel en Equitación y Trato con Animales. Estos ganaran un PE adicional en Fuerza o Constitución, ganaran un dado en sus tiradas de daño físico, sumaran uno a su movimiento final, y solo podrán usar ciertos tipos de armas y armaduras hechos especialmente para ellos.">Gigante</option>
+                  <option value="Los gnomos ganan un nivel adicional en dos de estas habilidades: Comercio, Herrería, Investigación y Alquimia, pero pierden un nivel en Defensa. Los gnomos podrán realizar ilusiones del tamaño de su puño que podrán mover objetos que pesen tanto como su Nivel x 10 Kilos y disminuye la dificultad de cualquier cosa que estos construyan en 10 (20 a nivel 5). A su vez reciben un bonus de oro al completar las misiones o al encontrar cofres de tesoro igual a un 50% más que las otras razas (inclusive el oro entregado al principio de la roleada), además ganaran un dado en las tiradas relacionadas en encontrar tesoros u oro.">Gnomo</option>
+                  <option value="Las hadas ganan un nivel adicional en Hechicería y Sigilo, pero pierden un nivel en Intimidación. A su vez las hadas ganan 6.5 puntos de Evasión por cada punto en Destreza, obtienen un PE en Entendimiento o Destreza y empezaran con la ventaja Alas (si no la desean obtendrán 5 PH) y solo podrán usar ciertos tipos de armas y armaduras hechos especialmente para ellas.">Hada</option>
+                  <option value="Los humanos ganan un nivel en dos de estas habilidades: Comercio, Supervivencia, Teología o Alquimia, pero pierden un nivel en Trato con Animales. A su vez, los humanos reciben 2 Puntos de Habilidad y 1 Punto de Experiencia adicional por sesión">Humano</option>
+                  <option value="Los insctoides ganan un nivel adicional en Supervivencia y pierden un nivel en Cultura, y las siguientes habilidades Sigilo y Mano a Mano (Asesino), pueden usar sus garras como armas usando Destreza para el daño y guardan un dado extra en la tirada de daño. Puedes aplicar Veneno a tus garras y resta -10 a la tirada del enemigo para resistirla.">Insectoide Asesino</option>
+                  <option value="Los insctoides ganan un nivel adicional en Supervivencia y pierden un nivel en Cultura, y las siguientes habilidades Defensa y Arma de Asedio (Bombardero), empezaran con la ventaja “Alas” (si no la desean obtendrán 5 PH), funcionan como Armas de Asedio, pudiendo usar municiones creadas en su cuerpo, realizan Fuerza k3 (+0k1 cada 2 niveles) en un área de 3x3, pero restan -10 a su Precisión con estas.">Insectoide Bombardero</option>
+                  <option value="Los insctoides ganan un nivel adicional en Supervivencia y pierden un nivel en Cultura, y las siguientes habilidades Pericias y Alerta (Obrero), empezaran con las ventajas “Infatigable” (si no la desean obtendrán 1 PH), e “Instintos” (si no la desean obtendrán 3 PH), sus creaciones se consideran de un nivel superior y sus trampas cuentan como si tuviera su puntuación en Supervivencia 2 niveles más alto. Otorga 6 de Armadura.">Insectoide Obrero</option>
+                  <option value="Los kitsunes ganan un nivel adicional en tres de estas habilidades: Academicismo, Ocultismo, Subterfugio, Hechicería, Medicina, Veneno y Trato con Animales pero pierden un nivel en Equitación. Y al crear el personaje podrán elegir si sumar a todas sus tiradas de Sociales o Conocimientos su Nivel de Personaje + 3.">Kitsune</option>
+                  <option value="Los licántropos ganan un nivel adicional en tres de estas habilidades: Supervivencia, Trato con Animales, Intimidación, Atletismo y Comercio, pero pierden un nivel en Etiqueta y Pericias. Los licántropos pueden o “Convertirse” o permanecer constantemente en su forma de lobo, mientras están en esta, ganan un dado adicional en las tiradas de daño físico, suman cualquiera de sus Estadísticas de Cuerpo a su movimiento una vez adicional y si solo poseen un Nivel de HP tendrán dos turnos en combate en lugar de uno. Sin embargo, en las noches de luna llena obtendrán de manera pasivo esto último, pero deben hacer una tirada de Fe (Dificultad= 25 –puede subir-) para evitar perder el control.">Licantropo</option>
+                  <option value="Las medusas ganan un nivel adicional en Hechicería, Intimidación y Trato con Animales. Las medusas empiezan con la ventaja Visión 360° (si no la desean obtendrán 5 PH), ganan un nivel de Entendimiento o Carisma, y además las medusas llevan consigo el poder de petrificar a su víctima cuando estas sean miradas directamente a los ojos. Para esto la medusa debe primero realizar una tirada de Precisión usando su Carisma o Entendimiento únicamente para la tirada (guarda tantos dados como tira) y si lo supera su oponente debe lanzar 1d10 y en esa cantidad de turnos, si no logra derrotar a la medusa, este se petrificará. Esta habilidad solo puede ser usada tantas veces como el nivel del personaje más uno (no contando fallo para usos), pero si esta habilidad es reflejada por cualquier medio la medusa se petrificará en 1d10 rondas.">Medusa</option>
+                  <option value="Los mimic ganan un nivel adicional en Sigilo y Subterfugio, pero pierden un nivel en Trato con Animales y Etiqueta. A su vez los mimic son capaces de transformarse en objetos de tamaño mediano o pequeño debiendo tomarse un minuto para concluir la transformación, en esta forma repite los 9 como 0 en tiradas de Sigilo y si alguien los toca pueden realizar un ataque y un agarre, repitiendo los 9 como 0 en ambas tiradas (no de daño). Además del daño realizado deberá lanzar 2d4 para determinar el daño a la armadura equipada o al arma si no posee armadura; y aumenta en +10 la dificultad de soltarse de sus agarres.">Mimic</option>
+                  <option value="Los orcos ganan un nivel adicional en Intimidación y Armas (a elección) o Hechicería, pero pierden un dado en Etiqueta. A su vez, guardan un dado adicional en las tiradas de daño, si pierden dos Niveles de HP guardaran otro dado adicional y uno más si solo les queda un Nivel de HP. Y la primera vez que fueran a caer inconscientes en combate en lugar de eso se mantienen en 1 de HP y tendrán éxito en su primera Tirada de Salvación">Orco</option>
+                  <option value="Los Slimes ganan un nivel adicional en dos de estas habilidades: Alquimia, Venenos, Empatía y Medicina, pero pierden un nivel en Cultura. A diferencia del resto de las razas estos no tendrán Energía, solo Vida y Mana, la mitad de su puntuación en Espíritu se suma a cada nivel de HP de estos. Además podrán pagar los skills con MP, pagando la mitad de EP que tendrían que pagar normalmente.">Slime</option>
+                  <option value="Los stella ganan un nivel adicional en dos de estas habilidades: Teología, Ocultismo y Hechicería, pero pierden un nivel en Supervivencia. Lanza un dado adicional en las tiradas de daño de Oscuridad o Luz, guardando un dado adicional si es día para los de luz, o para oscuridad si es de noche, además de esto recuperan 5 (10 a nivel 5) de HP por el daño producido con estos durante el momento correcto del día.">Stella</option>
+                  <option value="Los tritones ganan un nivel adicional en dos de estas habilidades: Academicismo, Alquimia o Investigación, pero pierden un nivel en Atletismo (pero pierden esta desventaja y ganan un dado cuando se encuentran en el agua). A su vez los tritones tienen una piel escamosa muy resistente que otorga a estos 8 Armadura y podrán respirar bajo además de duplicar su movimiento en esta, pero en tierra pierden uno de movimiento. Además de esto podrás usar un hermoso canto para distraer a tus enemigos, lanza 1d10+ Interpretación o Carisma contra su Espíritu, si los superas perderán 10 de Evasión.">Triton</option>
+                  <option value="Los trolls ganan un nivel adicional en Supervivencia, Armas (Arcos o Ballestas) y Medicina. A su vez estos poseen una regeneración sobrenatural teniendo la posibilidad de en combate gastar de 5 EP para recuperar un Nivel de HP, y obtienen la ventaja Curación Rápida (si no la desean obtendrán 1 PH).">Trol</option>
+                  <option value="Los unicornios ganan un nivel adicional Hechicería, Empatía y Atletismo, pero pierden un nivel en Subterfugio. Siempre que estos realicen una buena acción, traigan risas o felicidad, o por otras acciones en las que el Master así lo ameritase, ganaran “Contadores de Alegría”. Estos contadores pueden gastarse para ganar dados en cualquier tirada de personaje, el jugador podrá utilizar tantos dados como desee (1 Contador= 1 Dado Ganado). Además de esto, suman su Destreza a su movimiento y puede también, gastar 2 de MP, derramar lágrimas sobre un aliado o tocarlo con su cuerno para recuperar 10 (15 a nivel 5) de HP a este.">Unicornio</option>
+                  <option value="Las valkyrias ganan un nivel adicional en dos de estas habilidades: Armas (a elección), Defensa, Teología o Batalla. A su vez podrán gastar una Acción Menor luego de atacar o curar para recuperar HP de todos sus aliados igual a su puntuación en Arma, Defensa o Batalla.">Valkiria</option>
+                  <option value="Los vampiros ganan un nivel adicional en tres de estas habilidades: Cultura, Etiqueta, Ocultismo, Cocina, Empatía o Subterfugio, pero pierden un nivel en Teología. A su vez los vampiros empiezan con un PE adicional en Carisma y recuperan 5 (10 a nivel 5) de HP por el daño producido. A su vez tendrán la posibilidad de recuperar 3 Niveles de HP tomando la sangre del cuello de un personaje, pero son extremadamente débiles a la luz solar, solo pueden permanecer bajo esta por cortos periodos (veinte minutos por nivel de personaje + 20), no poseen reflejo.">Vampiro</option>
+                  <option value="Las Yuki-Onna ganan un nivel en Empatía y pierden un nivel en Sigilo, además ganan las siguientes habilidades y Lingüística y Subterfugio (Hielo), empieza con la ventaja Glamoroso (si no la desean obtendrán 5 PH), estas además tienen el poder de caminar sobre el agua convirtiendo el suelo por donde caminan en hielo, y gana un dado adicional en las tiradas de daño que realiza daño de hielo.">Yuki-Onna Hielo</option>
+                  <option value="Las Yuki-Onna ganan un nivel en Empatía y pierden un nivel en Sigilo, además ganan las siguientes habilidades Comercio y Etiqueta (Luna), empieza con la ventaja Glamoroso (si no la desean obtendrán 5 PH), cuando sea de noche estas ganan Nivel de Personaje Nivel de Personaje + 3 en todas sus tiradas de Conocimiento, Sociales o Proezas (elegir en la creación).">Yuki-Onna Luna</option>
+                  <option value="Las Yuki-Onna ganan un nivel en Empatía y pierden un nivel en Sigilo, además ganan las siguientes habilidades Atletismo y Mano a Mano (Vampiro), lanzan un dado adicional en las tiradas de daño y recuperan 5 (10 a nivel 5) de HP por el daño producido, además sumara su Nivel de Personaje + 5 a las tiradas para seguir/cazar a alguien.">Yuki-Onna Vampiro</option>
+                  <option value="Los zombies ganan un nivel adicional en Intimidación y Supervivencia, pero pierden un dado en Pericias. A su vez estos poseen 11 Niveles de HP Totales, pero solo 3 Niveles Negativos, además restaran -3 a sus Tiradas de Salvación y reciben un dado (guardado) de daño adicional de fuego y sacro. Los zombies no necesitaran comer ni dormir, pero deben comer un poco de carne al menos una vez por día y descansar al menos una vez por semana.">Zombie</option>
+              </select>
+              </select>
+          </div>
+      </div>
+
+      <div class="desg">
+      <label class="descrip">Descripción</label>
+      <textarea class="desgeneral" type="text" name="attr_desgeneral" spellcheck="false" placeholder="Descripción General del Personaje"></textarea></div>
+
+  </div>
+
+    <div class="cuerpo">
+      <div class="cue"><button class="buttonstyle" name="roll_cuerpo" type="roll" value="&{template:default} {{name=Cuerpo}} {{Resultado=[[@{cuerpo}d10!!+@{cuerpo_flat}]]}}">Cuerpo</button>
+        <input type="number" name="attr_cuerpo" value="0" title="@{cuerpo}" readonly>
+      </div>
+    <div class="estadisticas-cuerpo">
+      <button class="buttonstyle" name="roll_fuerza" type="roll" value="&{template:default} {{name=Fuerza}} {{Resultado=[[((@{fuerza}+@{fuerza_tirada})d10k@{fuerza}!!+@{fuerza_flat})]]}}">Fuerza</button>
+      <input class="nmr1" type="number" name="attr_fuerza_base" value="1" >
+      <input type="hidden" name="attr_fuerza_talent" value="0" readonly>  
+      <input type="hidden" name="attr_fuerza_item" value="0" readonly>
+      <input type="hidden" name="attr_fuerza_buff" value="0" readonly>
+      <input type="hidden" name="attr_fuerza_fijo" value="0" readonly>
+    <input class="nmr2" type="number" name="attr_fuerza" value="0" title="@{fuerza}" readonly>
+    </div>
+
+      <div class="estadisticas-cuerpo">
+        <button class="buttonstyle" name="roll_destreza" type="roll" value="&{template:default} {{name=Destreza}} {{Resultado=[[((@{destreza}+@{destreza_tirada})d10k@{destreza}!!+@{destreza_flat})]]}}">Destreza</button>
+        <input class="nmr1" type="number" name="attr_destreza_base" value="1" >
+        <input type="hidden" name="attr_destreza_talent" value="0" readonly>
+        <input type="hidden" name="attr_destreza_item" value="0" readonly>
+        <input type="hidden" name="attr_destreza_buff" value="0" readonly>
+        <input type="hidden" name="attr_destreza_fijo" value="0" readonly>
+      <input class="nmr2" type="number" name="attr_destreza" value="0" title="@{destreza}" readonly>
+      </div>
+
+        <div class="estadisticas-cuerpo">
+          <button class="buttonstyle" name="roll_constitucion" type="roll" value="&{template:default} {{name=Constitución}} {{Resultado=[[((@{constitucion}+@{constitucion_tirada})d10k@{constitucion}!!+@{constitucion_flat})]]}}">Constitución</button>
+          <input class="nmr1" type="number" name="attr_constitucion_base" value="1" >
+          <input type="hidden" name="attr_constitucion_talent" value="0" readonly>
+          <input type="hidden" name="attr_constitucion_item" value="0" readonly>
+          <input type="hidden" name="attr_constitucion_buff" value="0" readonly>
+          <input type="hidden" name="attr_constitucion_fijo" value="0" readonly>
+        <input class="nmr2" type="number" name="attr_constitucion" value="0" title="@{constitucion}" readonly>
+        </div>
+
+      </div>
+
+      <div class="mente">
+        <div class="men"><button class="buttonstyle" name="roll_mente" type="roll" value="&{template:default} {{name=Mente}} {{Resultado=[[@{mente}d10!!+@{mente_flat}]]}}">Mente</button>
+          <input type="number" name="attr_mente" value="0" title="@{mente}" readonly>
+        </div>
+        <div class="estadisticas-mente">
+          <button class="buttonstyle" name="roll_entendimiento" type="roll" value="&{template:default} {{name=Entendimiento}} {{Resultado=[[((@{entendimiento}+@{entendimiento_tirada})d10k@{entendimiento}!!+@{entendimiento_flat})]]}}">Entendimiento</button>
+          <input class="nmr1" type="number" name="attr_entendimiento_base" value="1" >
+          <input type="hidden" name="attr_entendimiento_talent" value="0" readonly>
+          <input type="hidden" name="attrentendimiento_item" value="0" readonly>
+          <input type="hidden" name="attr_entendimiento_buff" value="0" readonly>
+          <input type="hidden" name="attr_entendimiento_fijo" value="0" readonly>
+        <input class="nmr2" type="number" name="attr_entendimiento" value="0" title="@{entendimiento}" readonly>
+        </div>
+
+        <div class="estadisticas-mente">
+          <button class="buttonstyle" name="roll_fe" type="roll" value="&{template:default} {{name=Fe}} {{Resultado=[[((@{fe}+@{fe_tirada})d10k@{fe}!!+@{fe_flat})]]}}">Fe</button>
+          <input class="nmr1" type="number" name="attr_fe_base" value="1" >
+          <input type="hidden" name="attr_fe_talent" value="0" readonly>
+          <input type="hidden" name="attr_fe_item" value="0" readonly>
+          <input type="hidden" name="attr_fe_buff" value="0" readonly>
+          <input type="hidden" name="attr_fe_fijo" value="0" readonly>
+        <input class="nmr2" type="number" name="attr_fe" value="0" title="@{fe}" readonly>
+        </div>
+
+      </div>
+
+      <div class="espiritu">
+        <div class="esp"><button class="buttonstyle" name="roll_espiritu" type="roll" value="&{template:default} {{name=Espíritu}} {{Resultado=[[@{espiritu}d10!!+@{espiritu_flat}]]}}">Espíritu</button>
+          <input type="number" name="attr_espiritu" value="0" title="@{espiritu}" readonly>
+        </div>
+        <div class="estadisticas-espiritu">
+          <button class="buttonstyle" name="roll_bravura" type="roll" value="&{template:default} {{name=Bravura}} {{Resultado=[[((@{bravura}+@{bravura_tirada})d10k@{bravura}!!+@{bravura_flat})]]}}">Bravura</button>
+          <input class="nmr1" type="number" name="attr_bravura_base" value="1" >
+          <input type="hidden" name="attr_bravura_talent" value="0" readonly>
+          <input type="hidden" name="attr_bravura_item" value="0" readonly>
+          <input type="hidden" name="attr_bravura_buff" value="0" readonly>
+          <input type="hidden" name="attr_bravura_fijo" value="0" readonly>
+         <input class="nmr2" type="number" name="attr_bravura" value="0" title="@{bravura}" readonly>
+        </div>
+
+        <div class="estadisticas-espiritu">
+          <button class="buttonstyle" name="roll_carisma" type="roll" value="&{template:default} {{name=Carisma}} {{Resultado=[[((@{carisma}+@{carisma_tirada})d10k@{carisma}!!+@{carisma_flat})]]}}">Carisma</button>
+          <input class="nmr1" type="number" name="attr_carisma_base" value="1" >
+          <input type="hidden" name="attr_carisma_talent" value="0" readonly>
+          <input type="hidden" name="attr_carisma_item" value="0" readonly>
+          <input type="hidden" name="attr_carisma_buff" value="0" readonly>
+          <input type="hidden" name="attr_carisma_fijo" value="0" readonly>
+        <input class="nmr2" type="number" name="attr_carisma" value="0" title="@{carisma}" readonly>
+        </div>
+      
+      </div>
+
+      <div class="hp"><input class="hpf1" type="number" name="attr_hptotal" value="@{hptotal}" title="@{hptotal}">/<input class="hpf2" type="number" name="attr_hptotal_max" title="@{hptotal_max}" value="" readonly/></div>
+
+      <div class="mp"><input class="mpf1" type="number" name="attr_mptotal" value="" title="@{mptotal}">/<input class="mpf2" type="number" name="attr_mptotal_max" title="@{mptotal_max}" value="" readonly/></div>
+
+      <div class="ep"><input class="epf1" type="number" name="attr_eptotal" value="" title="@{eptotal}">/<input class="epf2" type="number" name="attr_eptotal_max" title="@{eptotal_max}" value="" readonly/></div>       
+
+          <input type="hidden" name="attr_fuerza_tirada" value="0" readonly>
+          <input type="hidden" name="attr_destreza_tirada" value="0" readonly>
+          <input type="hidden" name="attr_constitucion_tirada" value="0" readonly>
+          <input type="hidden" name="attr_entendimiento_tirada" value="0" readonly>
+          <input type="hidden" name="attr_fe_tirada" value="0" readonly>
+          <input type="hidden" name="attr_bravura_tirada" value="0" readonly>
+          <input type="hidden" name="attr_carisma_tirada" value="0" readonly>
+
+          <input type="hidden" name="attr_proezas_flat" value="0" readonly>
+          <input type="hidden" name="attr_social_flat" value="0" readonly>
+          <input type="hidden" name="attr_conocimiento_flat" value="0" readonly>
+
+          <input type="hidden" name="attr_cuerpo_flat" value="0" readonly>
+          <input type="hidden" name="attr_mente_flat" value="0" readonly>
+          <input type="hidden" name="attr_espiritu_flat" value="0" readonly>
+
+
+          <div class="proezas">
+            <div class="habilidades-proezas">
+              <div class="proezas-total">
+              <input type="number" name="attr_alerta" value="0" title="@{alerta}" readonly>
+              </div>
+              <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_alerta" type="roll" value="&{template:default} {{name=Alerta}} {{Resultado=[[(@{alerta}+?{Name of Query|Entendimiento, @{entendimiento}+@{entendimiento_tirada}|Destreza, @{destreza}+@{destreza_tirada}})d10k@{alerta}!!+@{alerta_flat}+@{proezas_flat}]]}}">Alerta</button>
+              </div>
+              <div class="proezas-base">
+                <input type="number" name="attr_alerta_base" value="0" >
+                </div>
+                <input type="hidden" name="attr_alerta_talent" value="0" readonly>
+                <input type="hidden" name="attr_alerta_item" value="0" readonly>
+                <input type="hidden" name="attr_alerta_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_alerta_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+                <input type="number" name="attr_armas" value="0" title="@{armas}" readonly>
+              </div>
+              <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_armas" type="roll" value="&{template:default} {{name=Armas}} {{Resultado=[[(@{armas}+?{Name of Query|Fuerza, @{fuerza}+@{fuerza_tirada}|Destreza, @{destreza}+@{destreza_tirada}|Constitución, @{constitucion}+@{constitucion_tirada}})d10k@{armas}!!+@{armas_flat}+@{proezas_flat}]]}}">Armas</button>
+              </div>
+              <div class="proezas-base">
+                <input type="number" name="attr_armas_base" value="0" >
+                </div>
+                <select class="arma" name="attr_armasselected">
+                    <option value="arcos">Arcos y Ballestas</option>
+                    <option value="arm_pes">Armas Pesadas</option>
+                    <option value="bas_por">Bastones y Porras</option>
+                    <option value="cad_lat">Cademas y Latigos</option>
+                    <option value="dagas">Dagas</option>
+                    <option value="espadas">Espadas</option>
+                    <option value="katar">Katar</option>
+                    <option value="lan_ast">Lanzas y Astas</option>
+                    <option value="man_man">Mano a Mano</option>
+                    <option value="arm_ase">Armas de Asedio</option>
+                  </select>
+                <input type="hidden" name="attr_armas_talent" value="0" readonly>
+                <input type="hidden" name="attr_armas_item" value="0" readonly>
+                <input type="hidden" name="attr_armas_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_armas_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+              <input type="number" name="attr_atletismo" value="0" title="@{atletismo}" readonly>
+              </div>
+              <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_atletismo" type="roll" value="&{template:default} {{name=Atletismo}} {{Resultado=[[(@{atletismo}+?{Name of Query|Fuerza, @{fuerza}+@{fuerza_tirada}|Destreza, @{destreza}+@{destreza_tirada}|Constitución, @{constitucion}+@{constitucion_tirada}})d10k@{atletismo}!!+@{atletismo_flat}+@{proezas_flat}]]}}">Atletismo</button>
+              </div>
+              <div class="proezas-base">
+                <input type="number" name="attr_atletismo_base" value="0" >
+                </div>
+              
+                <input type="hidden" name="attr_atletismo_talent" value="0" readonly>
+                <input type="hidden" name="attr_atletismo_item" value="0" readonly>
+                <input type="hidden" name="attr_atletismo_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_atletismo_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+              <input type="number" name="attr_batalla" value="0" title="@{batalla}" readonly>
+              </div>
+              <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_batalla" type="roll" value="&{template:default} {{name=Batalla}} {{Resultado=[[(@{batalla}+@{entendimiento}+@{entendimiento_tirada})d10k@{batalla}!!+@{batalla_flat}+@{proezas_flat}]]}}">Batalla</button>
+              </div>
+              <div class="proezas-base">
+                <input type="number" name="attr_batalla_base" value="0" >
+                </div>
+              
+                <input type="hidden" name="attr_batalla_talent" value="0" readonly>
+                <input type="hidden" name="attr_batalla_item" value="0" readonly>
+                <input type="hidden" name="attr_batalla_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_batalla_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+              <input type="number" name="attr_concentracion" value="0" title="@{concentracion}" readonly>
+              </div>
+              <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_concentracion" type="roll" value="&{template:default} {{name=Concentración}} {{Resultado=[[(@{concentracion}+?{Name of Query|Bravura, @{bravura}+@{bravura_tirada}|Fe, @{fe}+@{fe_tirada}})d10k@{concentracion}!!+@{concentracion_flat}+@{proezas_flat}]]}}">Concentración</button>
+              </div>
+              <div class="proezas-base">
+                <input type="number" name="attr_concentracion_base" value="0" >
+                </div>
+              
+                <input type="hidden" name="attr_concentracion_talent" value="0" readonly>
+                <input type="hidden" name="attr_concentracion_item" value="0" readonly>
+                <input type="hidden" name="attr_concentracion_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_concentracion_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+              <input type="number" name="attr_conducir" value="0" title="@{conducir}" readonly>
+              </div>
+              <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_conducir" type="roll" value="&{template:default} {{name=Conducir}} {{Resultado=[[(@{conducir}+?{Name of Query|Destreza, @{destreza}+@{destreza_tirada}|Entendimiento, @{entendimiento}+@{entendimiento_tirada}})d10k@{conducir}!!+@{conducir_flat}+@{proezas_flat}]]}}">Conducir</button>
+              </div>
+              <div class="proezas-base">
+                <input type="number" name="attr_conducir_base" value="0" >
+                </div>
+              
+                <input type="hidden" name="attr_conducir_talent" value="0" readonly>
+                <input type="hidden" name="attr_conducir_item" value="0" readonly>
+                <input type="hidden" name="attr_conducir_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_conducir_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+              <input type="number" name="attr_defensa" value="0" title="@{defensa}" readonly>
+              </div>
+              <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_defensa" type="roll" value="&{template:default} {{name=Defensa}} {{Resultado=[[(@{defensa}+@{constitucion}+@{constitucion_tirada})d10k@{defensa}!!+@{defensa_flat}+@{proezas_flat}]]}}">Defensa</button>
+              </div>
+              <div class="proezas-base">
+                <input type="number" name="attr_defensa_base" value="0" >
+                </div>
+              
+                <input type="hidden" name="attr_defensa_talent" value="0" readonly>
+                <input type="hidden" name="attr_defensa_item" value="0" readonly>
+                <input type="hidden" name="attr_defensa_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_defensa_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+              <input type="number" name="attr_equitacion" value="0" title="@{equitacion}" readonly>
+              </div>
+              <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_equitacion" type="roll" value="&{template:default} {{name=Equitación}} {{Resultado=[[(@{equitacion}+@{destreza}+@{destreza_tirada})d10k@{equitacion}!!+@{equitacion_flat}+@{proezas_flat}]]}}">Equitación</button>
+              </div>
+              <div class="proezas-base">
+                <input type="number" name="attr_equitacion_base" value="0" >
+                </div>
+              
+                <input type="hidden" name="attr_equitacion_talent" value="0" readonly>
+                <input type="hidden" name="attr_equitacion_item" value="0" readonly>
+                <input type="hidden" name="attr_equitacion_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_equitacion_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+              <input type="number" name="attr_herreria" value="0" title="@{herreria}" readonly>
+              </div>
+              <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_herreria" type="roll" value="&{template:default} {{name=Herrería}} {{Resultado=[[(@{herreria}+@{fuerza}+@{fuerza_tirada})d10k@{herreria}!!+@{herreria_flat}+@{proezas_flat}]]}}">Herrería</button>
+              </div>
+              <div class="proezas-base">
+                <input type="number" name="attr_herreria_base" value="0" >
+                </div>
+              
+                <input type="hidden" name="attr_herreria_talent" value="0" readonly>
+                <input type="hidden" name="attr_dexterity_item" value="0" readonly>
+                <input type="hidden" name="attr_dexterity_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_dexterity_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+               <input type="number" name="attr_intimidacion" value="0" title="@{intimidacion}" readonly>
+               </div>
+               <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_intimidacion" type="roll" value="&{template:default} {{name=Intimidación}} {{Resultado=[[(@{intimidacion}+?{Name of Query|Bravura, @{bravura}+@{bravura_tirada}|Carisma, @{carisma}+@{carisma_tirada}})d10k@{intimidacion}!!+@{intimidacion_flat}+@{proezas_flat}]]}}">Intimidación</button>
+                </div>
+                <div class="proezas-base">
+                  <input type="number" name="attr_intimidacion_base" value="0" >
+                  </div>
+                <input type="hidden" name="attr_intimidacion_talent" value="0" readonly>
+                <input type="hidden" name="attr_intimidacion_item" value="0" readonly>
+                <input type="hidden" name="attr_intimidacion_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_intimidacion_fijo" value="0" readonly>
+                </div>
+               </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+              <input type="number" name="attr_mecanica" value="0" title="@{mecanica}" readonly>
+              </div>
+              <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_mecanica" type="roll" value="&{template:default} {{name=Mecanica}} {{Resultado=[[(@{mecanica}+?{Name of Query|Destreza, @{destreza}+@{destreza_tirada}|Entendimiento, @{entendimiento}+@{entendimiento_tirada}})d10k@{mecanica}!!+@{mecanica_flat}+@{proezas_flat}]]}}">Mecanica</button>
+              </div>
+              <div class="proezas-base">
+                <input type="number" name="attr_mecanica_base" value="0" >
+                </div>
+              
+                <input type="hidden" name="attr_mecanica_talent" value="0" readonly>
+                <input type="hidden" name="attr_mecanica_item" value="0" readonly>
+                <input type="hidden" name="attr_mecanica_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_mecanica_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+              <input type="number" name="attr_pericias" value="0" title="@{pericias}" readonly>
+              </div>
+              <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_pericias" type="roll" value="&{template:default} {{name=Pericias}} {{Resultado=[[(@{pericias}+@{destreza}+@{destreza_tirada})d10k@{pericias}!!+@{pericias_flat}+@{proezas_flat}]]}}">Pericias</button>
+              </div>
+              <div class="proezas-base">
+                <input type="number" name="attr_pericias_base" value="0" >
+                </div>
+                <input type="hidden" name="attr_pericias_talent" value="0" readonly>
+                <input type="hidden" name="attr_pericias_item" value="0" readonly>
+                <input type="hidden" name="attr_pericias_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_pericias_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+              <input type="number" name="attr_sigilo" value="0" title="@{sigilo}" readonly>
+              </div>
+              <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_sigilo" type="roll" value="&{template:default} {{name=Sigilo}} {{Resultado=[[(@{sigilo}+@{destreza}+@{destreza_tirada})d10k@{sigilo}!!+@{sigilo_flat}+@{proezas_flat}]]}}">Sigilo</button>
+              </div>
+              <div class="proezas-base">
+                <input type="number" name="attr_sigilo_base" value="0" >
+                </div>
+                <input type="hidden" name="attr_sigilo_talent" value="0" readonly>
+                <input type="hidden" name="attr_sigilo_item" value="0" readonly>
+                <input type="hidden" name="attr_sigilo_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_sigilo_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-proezas">
+                <div class="proezas-total">
+               <input type="number" name="attr_supervivencia" value="0" title="@{supervivencia}" readonly>
+               </div>
+               <div class="proezas-nombre">
+                <button class="buttonstyle" name="roll_supervivencia" type="roll" value="&{template:default} {{name=Supervivencia}} {{Resultado=[[(@{supervivencia}+?{Name of Query|Entendimiento, @{entendimiento}+@{entendimiento_tirada}|Fuerza, @{fuerza}+@{fuerza_tirada}|Destreza, @{destreza}+@{destreza_tirada}})d10k@{supervivencia}!!+@{supervivencia_flat}+@{proezas_flat}]]}}">Supervivencia</button>
+                </div>
+                <div class="proezas-base">
+                  <input type="number" name="attr_supervivencia_base" value="0" >
+                  </div>
+                <input type="hidden" name="attr_supervivencia_talent" value="0" readonly>
+                <input type="hidden" name="attr_supervivencia_item" value="0" readonly>
+                <input type="hidden" name="attr_supervivencia_buff" value="0" readonly>
+                <div class="proezas-fijo">
+                <input type="hidden" name="attr_supervivencia_fijo" value="0" readonly>
+                </div>
+               </div>
+              </div>
+          
+              <div class="conocimientos">
+                <div class="habilidades-conocimientos">
+                  <div class="conocimiento-total">
+                  <input type="number" name="attr_academicismo" value="0" title="@{academicismo}" readonly>
+                  </div>
+                    <div class="conocimiento-nombre"> <button class="buttonstyle" name="roll_academicismo" type="roll" value="&{template:default} {{name=Academicismo}} {{Resultado=[[(@{academicismo}+@{entendimiento}+@{entendimiento_tirada})d10k@{academicismo}!!+@{academicismo_flat}+@{conocimiento_flat}]]}}">Academicismo</button>
+                  </div>
+                  <div class="conocimientos-base">
+                    <input type="number" name="attr_academicismo_base" value="0" >
+                    </div>
+                    <input type="hidden" name="attr_academicismo_talent" value="0" readonly>
+                    <input type="hidden" name="attr_academicismo_item" value="0" readonly>
+                    <input type="hidden" name="attr_academicismo_buff" value="0" readonly>
+                    <div class="conocimiento-fijo">
+                    <input type="hidden" name="attr_academicismo_fijo" value="0" readonly>  
+                </div>
+              </div>
+                    
+                  <div class="habilidades-conocimientos">
+                    <div class="conocimiento-total">
+                  <input type="number" name="attr_alquimia" value="0" title="@{alquimia}" readonly>
+                  </div>
+                    <div class="conocimiento-nombre">
+                    <button class="buttonstyle" name="roll_alquimia" type="roll" value="&{template:default} {{name=Alquimia}} {{Resultado=[[(@{alquimia}+@{entendimiento}+@{entendimiento_tirada})d10k@{alquimia}!!+@{alquimia_flat}+@{conocimiento_flat}]]}}">Alquimia</button>
+                    </div>
+                    <div class="conocimientos-base">
+                    <input type="number" name="attr_alquimia_base" value="0" >
+                    </div>
+                    <input type="hidden" name="attr_alquimia_talent" value="0" readonly>
+                    <input type="hidden" name="attr_alquimia_item" value="0" readonly>
+                    <input type="hidden" name="attr_alquimiabuff" value="0" readonly>
+                    <div class="conocimiento-fijo">
+                    <input type="hidden" name="attr_alquimia_fijo" value="0" readonly>
+                </div>
+                    </div>
+                  <div class="habilidades-conocimientos">
+                    <div class="conocimiento-total">
+                  <input type="number" name="attr_hechiceria" value="0" title="@{hechiceria}" readonly>
+                  </div>
+                    <div class="conocimiento-nombre">
+                    <button class="buttonstyle" name="roll_hechiceria" type="roll" value="&{template:default} {{name=Hechiceria}} {{Resultado=[[(@{hechiceria}+?{Name of Query|Entendimiento, @{entendimiento}+@{entendimiento_tirada}|Fe, @{fe}+@{fe_tirada}})d10k@{hechiceria}!!+@{hechiceria_flat}+@{conocimiento_flat}]]}}">Hechiceria</button>
+                    </div>
+                    <div class="conocimientos-base">
+                    <input type="number" name="attr_hechiceria_base" value="0" >
+                    </div>
+                    <input type="hidden" name="attr_hechiceria_talent" value="0" readonly>
+                    <input type="hidden" name="attr_hechiceria_item" value="0" readonly>
+                    <input type="hidden" name="attr_hechiceria_buff" value="0" readonly>
+                    <div class="conocimiento-fijo">
+                    <input type="hidden" name="attr_hechiceria_fijo" value="0" readonly>
+                </div>
+                    </div>
+                  <div class="habilidades-conocimientos">
+                    <div class="conocimiento-total">
+                   <input type="number" name="attr_informatica" value="0" title="@{informatica}" readonly>
+                   </div>
+                    <div class="conocimiento-nombre">
+                    <button class="buttonstyle" name="roll_informatica" type="roll" value="&{template:default} {{name=Informática}} {{Resultado=[[(@{informatica}+?{Name of Query|Entendimiento, @{entendimiento}+@{entendimiento_tirada}|Fe, @{fe}+@{fe_tirada}})d10k@{informatica}!!+@{informatica_flat}+@{conocimiento_flat}]]}}">Informática</button>
+                    </div>
+                    <div class="conocimientos-base">
+                    <input type="number" name="attr_informatica_base" value="0" >
+                    </div>
+                    <input type="hidden" name="attr_informatica_talent" value="0" readonly>
+                    <input type="hidden" name="attr_informatica_item" value="0" readonly>
+                    <input type="hidden" name="attr_informatica_buff" value="0" readonly>
+                    <div class="conocimiento-fijo">
+                    <input type="hidden" name="attr_informatica_fijo" value="0" readonly>
+                </div>
+                      </div>
+                  <div class="habilidades-conocimientos">
+                    <div class="conocimiento-total">
+                   <input type="number" name="attr_investigacion" value="0" title="@{investigacion}" readonly>
+                   </div>
+                    <div class="conocimiento-nombre">
+                    <button class="buttonstyle" name="roll_investigacion" type="roll" value="&{template:default} {{name=Investigación}} {{Resultado=[[(@{investigacion}+@{entendimiento}+@{entendimiento_tirada})d10k@{investigacion}!!+@{investigacion_flat}+@{conocimiento_flat}]]}}">Investigación</button>
+                    </div>
+                    <div class="conocimientos-base">
+                    <input type="number" name="attr_investigacion_base" value="0" >
+                    </div>
+                    <input type="hidden" name="attr_investigacion_talent" value="0" readonly>
+                    <input type="hidden" name="attr_investigacion_item" value="0" readonly>
+                    <input type="hidden" name="attr_investigacion_buff" value="0" readonly>
+                    <div class="conocimiento-fijo">
+                    <input type="hidden" name="attr_investigacion_fijo" value="0" readonly>
+                </div>
+                    </div>
+                  <div class="habilidades-conocimientos">
+                    <div class="conocimiento-total">
+                   <input type="number" name="attr_linguistica" value="0" title="@{linguistica}" readonly>
+                   </div>
+                    <div class="conocimiento-nombre">
+                    <button class="buttonstyle" name="roll_linguistica" type="roll" value="&{template:default} {{name=Lingüística}} {{Resultado=[[(@{linguistica}+@{entendimiento}+@{entendimiento_tirada})d10k@{linguistica}!!+@{linguistica_flat}+@{conocimiento_flat}]]}}">Lingüística</button>
+                    </div>
+                    <div class="conocimientos-base">
+                    <input type="number" name="attr_linguistica_base" value="0" >
+                    </div>
+                    <input type="hidden" name="attr_linguistica_talent" value="0" readonly>
+                    <input type="hidden" name="attr_linguistica_item" value="0" readonly>
+                    <input type="hidden" name="attr_linguistica_buff" value="0" readonly>
+                    <div class="conocimiento-fijo">
+                    <input type="hidden" name="attr_linguistica_fijo" value="0" readonly>
+                </div>
+                    </div>
+                  <div class="habilidades-conocimientos">
+                    <div class="conocimiento-total">
+                  <input type="number" name="attr_medicina" value="0" title="@{medicina}" readonly>
+                  </div>
+                    <div class="conocimiento-nombre">
+                    <button class="buttonstyle" name="roll_medicina" type="roll" value="&{template:default} {{name=Medicina}} {{Resultado=[[(@{medicina}+@{entendimiento}+@{entendimiento_tirada})d10k@{medicina}!!+@{medicina_flat}+@{conocimiento_flat}]]}}">Medicina</button>
+                    </div>
+                    <div class="conocimientos-base">
+                    <input type="number" name="attr_medicina_base" value="0" >
+                    </div>
+                    <input type="hidden" name="attr_medicina_talent" value="0" readonly>
+                    <input type="hidden" name="attr_medicina_item" value="0" readonly>
+                    <input type="hidden" name="attr_medicina_buff" value="0" readonly>
+                    <div class="conocimiento-fijo">
+                    <input type="hidden" name="attr_medicina_fijo" value="0" readonly>
+                </div>
+                    </div>
+                  <div class="habilidades-conocimientos">
+                    <div class="conocimiento-total">
+                  <input type="number" name="attr_ocultismo" value="0" title="@{ocultismo}" readonly>
+                  </div>
+                    <div class="conocimiento-nombre">
+                    <button class="buttonstyle" name="roll_ocultismo" type="roll" value="&{template:default} {{name=Ocultismo}} {{Resultado=[[[[@{ocultismo}+?{Name of Query|Entendimiento, @{entendimiento}+@{entendimiento_tirada}|Fe, @{fe}+@{fe_tirada}}]]d10k@{ocultismo}!!+@{ocultismo_flat}+@{conocimiento_flat}]]}}">Ocultismo</button>
+                    </div>
+                    <div class="conocimientos-base">
+                    <input type="number" name="attr_ocultismo_base" value="0" >
+                    </div>
+                    <input type="hidden" name="attr_ocultismo_talent" value="0" readonly>
+                    <input type="hidden" name="attr_ocultismo_item" value="0" readonly>
+                    <input type="hidden" name="attr_ocultismo_buff" value="0" readonly>
+                    <div class="conocimiento-fijo">
+                    <input type="hidden" name="attr_ocultismo_fijo" value="0" readonly>
+                </div>
+                    </div>
+                  <div class="habilidades-conocimientos">
+                    <div class="conocimiento-total">
+                  <input type="number" name="attr_teologia" value="0" title="@{teologia}" readonly>
+                  </div>
+                    <div class="conocimiento-nombre">
+                    <button class="buttonstyle" name="roll_teologia" type="roll" value="&{template:default} {{name=Teologia}} {{Resultado=[[[[@{teologia}+?{Name of Query|Entendimiento, @{entendimiento}+@{entendimiento_tirada}|Fe, @{fe}+@{fe_tirada}}]]d10k@{teologia}!!+@{teologia_flat}+@{conocimiento_flat}]]}}">Teologia</button>
+                    </div>
+                    <div class="conocimientos-base">
+                    <input type="number" name="attr_teologia_base" value="0" >
+                    </div>
+                    <input type="hidden" name="attr_teologia_talent" value="0" readonly>
+                    <input type="hidden" name="attr_teologia_item" value="0" readonly>
+                    <input type="hidden" name="attr_teologia_buff" value="0" readonly>
+                    <div class="conocimiento-fijo">
+                    <input type="hidden" name="attr_teologia_fijo" value="0" readonly>
+                </div>
+                    </div>
+                  <div class="habilidades-conocimientos">
+                    <div class="conocimiento-total">
+                  <input type="number" name="attr_tratoani" value="0" title="@{tratoani}" readonly>
+                  </div>
+                    <div class="conocimiento-nombre">
+                    <button class="buttonstyle" name="roll_tratoani" type="roll" value="&{template:default} {{name=Trato con Animales}} {{Resultado=[[[[@{tratoani}+?{Name of Query|Entendimiento, @{entendimiento}+@{entendimiento_tirada}|Carisma, @{carisma}+@{carisma_tirada}}]]d10k@{tratoani}!!+@{tratoani_flat}+@{conocimiento_flat}]]}}">Trato con Animales</button>
+                    </div>
+                    <div class="conocimientos-base">
+                    <input type="number" name="attr_tratoani_base" value="0" >
+                    </div>
+                    <input type="hidden" name="attr_tratoani_talent" value="0" readonly>
+                    <input type="hidden" name="attr_tratoani_item" value="0" readonly>
+                    <input type="hidden" name="attr_tratoani_buff" value="0" readonly>
+                    <div class="conocimiento-fijo">
+                    <input type="hidden" name="attr_tratoani_fijo" value="0" readonly>
+                </div>
+                    </div>
+                
+                  <div class="habilidades-conocimientos">
+                    <div class="conocimiento-total">
+                  <input type="number" name="attr_veneno" value="0" title="@{veneno}" readonly>
+                  </div>
+                    <div class="conocimiento-nombre">
+                    <button class="buttonstyle" name="roll_veneno" type="roll" value="&{template:default} {{name=Venenos}} {{Resultado=[[(@{veneno}+@{entendimiento}+@{entendimiento_tirada})d10k@{veneno}!!+@{veneno_flat}+@{conocimiento_flat}]]}}">Venenos</button>
+                    </div>
+                    <div class="conocimientos-base">
+                    <input type="number" name="attr_veneno_base" value="0" >
+                    </div>
+                    <input type="hidden" name="attr_veneno_talent" value="0" readonly>
+                    <input type="hidden" name="attr_veneno_item" value="0" readonly>
+                    <input type="hidden" name="attr_veneno_buff" value="0" readonly>
+                    <div class="conocimiento-fijo">
+                    <input type="hidden" name="attr_veneno_fijo" value="0" readonly>
+                </div>
+                  </div>
+                </div>
+              
+          <div class="sociales">
+            <div class="habilidades-sociales">
+              <div class="sociales-total">
+              <input type="number" name="attr_cocina" value="0" title="@{cocina}" readonly>
+              </div>
+                <div class="sociales-nombre">
+                <button class="buttonstyle" name="roll_cocina" type="roll" value="&{template:default} {{name=Cocina}} {{Resultado=[[(@{cocina}+?{Name of Query|Entendimiento, @{entendimiento}+@{entendimiento_tirada}|Destreza, @{destreza}+@{destreza_tirada}|Carisma, @{carisma}+@{carisma_tirada}})d10k@{cocina}!!+@{cocina_flat}+@{social_flat}]]}}">Cocina</button>
+              </div>
+              <div class="sociales-base">
+                <input type="number" name="attr_cocina_base" value="0" >
+                </div>
+                <input type="hidden" name="attr_cocina_talent" value="0" readonly>
+                <input type="hidden" name="attr_cocina_item" value="0" readonly>
+                <input type="hidden" name="attr_cocinabuff" value="0" readonly>
+                <div class="sociales-fijo">
+                <input type="hidden" name="attr_cocina_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-sociales">
+                <div class="sociales-total">
+              <input type="number" name="attr_comercio" value="0" title="@{comercio}" readonly>
+              </div>
+                <div class="sociales-nombre">
+                <button class="buttonstyle" name="roll_comercio" type="roll" value="&{template:default} {{name=Comercio}} {{Resultado=[[(@{comercio}+?{Name of Query|Entendimiento, @{entendimiento}+@{entendimiento_tirada}|Carisma, @{carisma}+@{carisma_tirada}})d10k@{comercio}!!+@{comercia_flat}+@{social_flat}]]}}">Comercio</button>
+              </div>
+              <div class="sociales-base">
+                <input type="number" name="attr_comercio_base" value="0" >
+                </div>
+                <input type="hidden" name="attr_comercio_talent" value="0" readonly>
+                <input type="hidden" name="attr_comercio_item" value="0" readonly>
+                <input type="hidden" name="attr_comercio_buff" value="0" readonly>
+                <div class="sociales-fijo">
+                <input type="hidden" name="attr_comercio_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-sociales">
+                <div class="sociales-total">
+              <input type="number" name="attr_cultura" value="0" title="@{cultura}" readonly>
+              </div>
+                <div class="sociales-nombre">
+                <button class="buttonstyle" name="roll_cultura" type="roll" value="&{template:default} {{name=Cultura}} {{Resultado=[[(@{cultura}+@{entendimiento}+@{entendimiento_tirada})d10k@{cultura}!!+@{cultura_flat}+@{social_flat}]]}}">Cultura</button>
+              </div>
+              <div class="sociales-base">
+                <input type="number" name="attr_cultura_base" value="0" >
+                </div>
+                <input type="hidden" name="attr_cultura_talent" value="0" readonly>
+                <input type="hidden" name="attr_cultura_item" value="0" readonly>
+                <input type="hidden" name="attr_cultura_buff" value="0" readonly>
+                <div class="sociales-fijo">
+                <input type="hidden" name="attr_cultura_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-sociales">
+                <div class="sociales-total">
+              <input type="number" name="attr_empatia" value="0" title="@{empatia}" readonly>
+              </div>
+                <div class="sociales-nombre">
+                <button class="buttonstyle" name="roll_empatia" type="roll" value="&{template:default} {{name=Empatía}} {{Resultado=[[(@{empatia}+@{carisma}+@{carisma_tirada})d10k@{empatia}!!+@{empatia_flat}+@{social_flat}]]}}">Empatía</button>
+              </div>
+              <div class="sociales-base">
+                <input type="number" name="attr_empatia_base" value="0" >
+                </div>
+                <input type="hidden" name="attr_empatia_talent" value="0" readonly>
+                <input type="hidden" name="attr_empatia__item" value="0" readonly>
+                <input type="hidden" name="attr_empatia__buff" value="0" readonly>
+                <div class="sociales-fijo">
+                <input type="hidden" name="attr_empatia__fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-sociales">
+                <div class="sociales-total">
+              <input type="number" name="attr_etiqueta" value="0" title="@{etiqueta}" readonly>
+              </div>
+                <div class="sociales-nombre">
+                <button class="buttonstyle" name="roll_etiqueta" type="roll" value="&{template:default} {{name=Etiqueta}} {{Resultado=[[(@{etiqueta}+@{carisma}+@{carisma_tirada})d10k@{etiqueta}!!+@{etiqueta_flat}+@{social_flat}]]}}">Etiqueta</button>
+              </div>
+              <div class="sociales-base">
+                <input type="number" name="attr_etiqueta_base" value="0" >
+                </div>
+                <input type="hidden" name="attr_etiqueta_talent" value="0" readonly>
+                <input type="hidden" name="attr_etiqueta_item" value="0" readonly>
+                <input type="hidden" name="attr_etiqueta_buff" value="0" readonly>
+                <div class="sociales-fijo">
+                <input type="hidden" name="attr_etiqueta_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-sociales">
+                <div class="sociales-total">
+                <input type="number" name="attr_interpretacion" value="0" title="@{interpretacion}" readonly>
+              </div>
+                <div class="sociales-nombre">
+                <button class="buttonstyle" name="roll_interpretacion" type="roll" value="&{template:default} {{name=Interpretación}} {{Resultado=[[(@{interpretacion}+@{carisma}+@{carisma_tirada})d10k@{interpretacion}!!+@{interpretacion_flat}+@{social_flat}]]}}">Interpretación</button>
+              </div>
+              <div class="sociales-base">
+                <input type="number" name="attr_interpretacion_base" value="0" >
+                </div>
+                <input type="hidden" name="attr_interpretacion_talent" value="0" readonly>
+                <input type="hidden" name="attr_interpretacion_item" value="0" readonly>
+                <input type="hidden" name="attr_interpretacion_buff" value="0" readonly>
+                <div class="sociales-fijo">
+                <input type="hidden" name="attr_interpretacion_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-sociales">
+                <div class="sociales-total">
+                <input type="number" name="attr_liderazgo" value="0" title="@{liderazgo}" readonly>
+              </div>
+                <div class="sociales-nombre">
+                <button class="buttonstyle" name="roll_liderazgo" type="roll" value="&{template:default} {{name=Liderazgo}} {{Resultado=[[(@{liderazgo}+?{Name of Query|Bravura, @{bravura}+@{bravura_tirada}|Carisma, @{carisma}+@{carisma_tirada}})d10k@{liderazgo}!!+@{liderazgo_flat}+@{social_flat}]]}}">Liderazgo</button>
+              </div>
+              <div class="sociales-base">
+                <input type="number" name="attr_liderazgo_base" value="0" >
+                </div>
+                <input type="hidden" name="attr_liderazgo_talent" value="0" readonly>
+                <input type="hidden" name="attr_liderazgo_item" value="0" readonly>
+                <input type="hidden" name="attr_liderazgo_buff" value="0" readonly>
+                <div class="sociales-fijo">
+                <input type="hidden" name="attr_liderazgo_fijo" value="0" readonly>
+                </div>
+              </div>
+              
+              <div class="habilidades-sociales">
+                <div class="sociales-total">
+              <input type="number" name="attr_subterfugio" value="0" title="@{subterfugio}" readonly>
+              </div>
+                <div class="sociales-nombre">
+                <button class="buttonstyle" name="roll_subterfugio" type="roll" value="&{template:default} {{name=Subterfugio}} {{Resultado=[[(@{subterfugio}+@{carisma}+@{carisma_tirada})d10k@{subterfugio}!!+@{subterfugio_flat}+@{social_flat}]]}}">Subterfugio</button>
+              </div>
+              <div class="sociales-base">
+                <input type="number" name="attr_subterfugio_base" value="0" >
+                </div>
+                <input type="hidden" name="attr_subterfugio_talent" value="0" readonly>
+                <input type="hidden" name="attr_subterfugio_item" value="0" readonly>
+                <input type="hidden" name="attr_subterfugio_buff" value="0" readonly>
+                <div class="sociales-fijo">
+                <input type="hidden" name="attr_subterfugio_fijo" value="0" readonly>
+                </div>
+              </div>
+              </div>
+
+  </div>
+
+</div>
+</div>
+
+<!--Ventajas y Desventajas-->
+<div class="sheet-trasfondosyt">
+  <div class="vydt">
+
+<h1 class="ir">Información de Raza</h1>
+<div class="inforazas">
+  <div class="raza1">
+    <div>
+  <h4 class="ra">Raza Principal</h4>
+</div>
+  <span name="attr_raza1" placeholder="Información de la raza elegida"></span>
+</div>
+<br>
+  <div class="raza2">
+    <div>
+  <h4 class="ra">Raza Adicional</h4>
+</div>
+  <span name="attr_raza2" placeholder="Información de la raza agre"></span>
+</div>
+</div>
+
+<h1 class="tr">Trasfondos</h1>
+<div class="venta">
+  <div>
+<label class="vjs">Ventajas</label>
+</div>
+<div class="ven-gridcosas">
+<fieldset class="repeating_ventajas">
+    <div class="ventajas">
+        <select class="nv" name="attr_ventajas">
+          <option value="-" selected>(Elegir)</option>
+            <option value="Por 5 minutos repites “1” como “0” en conocimientos">¡Eureka!</option>
+            <option value="Puedes adherirte a paredes y techos">Adherencia</option>
+            <option value="Con contacto físico vuelves a alguien adicto a tu presencia, se resiste con Fe o Bravura (superar 15+)">Adictivamente Tuyo</option>
+            <option value="Grupo o secta que puede asistir al personaje">Afiliación</option>
+            <option value="Cuando llegas a un nuevo lugar un suceso sobrenatural ocurre">Afinidad a los Sobrenatural</option>
+            <option value="Comprar magias de un elemento salen -1 PH, pero las demás +1 PH">Afinidad Elemental</option>
+            <option value="Tus ataques aplican un padecimiento, lanzando 1d10 si obtienes 10. Lo defines tu">Aflicción</option>
+            <option value="En tiradas de suerte del personaje se puede repetir una vez la tirada">Afortunado</option>
+            <option value="Permiten volar">Alas</option>
+            <option value="+0k1 de daño y Precisión siempre que estés encima">Altitud</option>
+            <option value="Usar 2 manos sin penalizador">Ambidiestro</option>
+            <option value="Figura misteriosa que ayuda cuando menos lo esperas">Ángel Guardian</option>
+            <option value="El personaje tiene peculiaridades raras">Apariencia Extraña</option>
+            <option value="+1 Alerta, +1 Supervivencia">Aptitud Física (Alerta)</option>
+            <option value="+1 Atletismo, +1 Sigilo ">Aptitud Física (Atlético)</option>
+            <option value="+1 Etiqueta y +1 Comercio">Aptitud Física (Galanura)</option>
+            <option value="+1 Comercio, +1 Subterfugio">Aptitud Mental (Comerciante)</option>
+            <option value="+1 Concentración, +1 Academicismo">Aptitud Mental (Concentración)</option>
+            <option value="+1 Investigación, +1 Empatía">Aptitud Mental (Perspicaz)</option>
+            <option value="Elige 1 habilidad, sube de nivel esta sin haberla usado">Aptitud Natural</option>
+            <option value="+1 Cultura, +1 Subterfugio">Aptitud Social (Lengua de Plata)</option>
+            <option value="+1 Cultura, +1 Subterfugio">Aptitud Social (Persuasivo)</option>
+            <option value="+1 Interpretación, +1 Etiqueta">Aptitud Social (Pico de Oro)</option>
+            <option value="Elige una raza y asesino o amigo, si es asesino gana 1k1 en tiradas de combate y +2 de movimiento, si es amigo gana 1k1 en tiradas de Carisma y Conocimiento">Asesino o Amigo de Raza “…”</option>
+            <option value="Puedes usar armas de distancia para Ataques de Oportunidad">Atacante a Distancia</option>
+            <option value="Puedes usar magias como Ataques de Oportunidad pagando el doble">Atacante Mágico</option>
+            <option value="+0k1 de daño cuando ataca por la espalda">Ataque Sorpresa</option>
+            <option value="+1 Atletismo, +1k1 Supervivencia con estadísticas de Cuerpo">Atleta Natural</option>
+            <option value="Posee 3 niveles: 1er jurisdicción local, portar armas y arrestar, 2do jurisdicción internacional, desaparecer crímenes y matar civiles, y 3er ordenar matar y más">Autoridad</option>
+            <option value="+1 Sigilo en combate">Bajo Perfil de Batalla</option>
+            <option value="Un ente poderoso te bendijo, viene en 3 niveles: 1er te protegen y ayudan miembros del clero o amistosos al ente, 2do una vez por días puedes consultar a tu ente para info de algo y 3er quien te bendijo intercede por ti">Bendecido</option>
+            <option value="Escondes objetos en tu ser, son indetectables si no se conoce su presencia">Bolsa Escondida</option>
+            <option value="+1 Pericias, +10 dificultad de encontrar objetos que tengas encima">Bolsillo Oculto</option>
+            <option value="Permite respirar bajo el agua">Branquias</option>
+            <option value="Posees 4 brazos, podes atacar hasta 4 veces por turno con armas ligeras o 2 con pesadas">Brazos de Shiva</option>
+            <option value="+15 en orientación o encontrar caminos">Brújula</option>
+            <option value="Lanza 1d10 después de dormir y si obtienes 10 gana 1k1 a todo por el día menos Iniciativa y daño">Buen Dia</option>
+            <option value="+10 balance en montura, +1k1 en combate montado (menos daño) y +1k0 iniciativa">Caballero Montado</option>
+            <option value="Reduce daño de caída a mitad o 0 si pasas tirada de Atletismo">Caída de Gato</option>
+            <option value="Suma +5 a tiradas de Sigilo si eres perseguido o buscado">Camaleón</option>
+            <option value="Carta que permite cometer delitos u otorga facilidades legales, a mayor puntaje más efectiva es">Carta de Comisión</option>
+            <option value="+1 Trato con Animales, +1 Supervivencia">Cazador Inteligente</option>
+            <option value="+1 Informática y +10 dificultad a ser hackeado">Codificador</option>
+            <option value="Establece un código con el narrador que debe seguir (se rompe con Fe) pero gana 1k1 si actúa acorde a este">Código de Honor</option>
+            <option value="Cola que es usable para agarrar objetos, pelear o similares">Cola Funcional</option>
+            <option value="+1k1 en tiradas de Combate, pero solo +1k0 en Iniciativa, falla tiradas de Salvación en combate">Combate Mortal</option>
+            <option value="Puedes dejarte poseer u obtener poder del espectro con tirada de Concentración">Conducto</option>
+            <option value="Tienes cara de buen tipo">Confiable</option>
+            <option value="+2k2 para pasar por lugares estrechos">Contorsionista</option>
+            <option value="+1k0 tiradas de Destreza">Coordinación Total</option>
+            <option value="Personaje que asiste al personaje principal, el jugador deberá manejar 2 fichas o podrá ser un NPC presente en todo momento">Criado</option>
+            <option value="+1k1 en tiradas para luchar por hacer el mal (no combate)">Cruel</option>
+            <option value="Recupera 2 niveles de HP por descanso largo">Curación Rápida</option>
+            <option value="Cuando te curan guardan 1 dado mas">Curador Efectivo</option>
+            <option value="El personaje no muere">Destino Superior</option>
+            <option value="Puedes rastrear/sentir algo especifico, da más punto mientras más común sea (muy raro, raro o normal)">Detección</option>
+            <option value="Disminuye hasta 5 veces tu tamaño. +1 Sigilo, +10 evasión y -1 movimiento">Disminución Rápida</option>
+            <option value="Tienes los rasgos de 2 razas">Doble Herencia</option>
+            <option value="Cumplido un requisito puedes volver a alguien tu esbirro y raza, fuerza tirada de Espíritu contra nivel x5+5 para someter y nivel x10+5 para solo raza">Dominación</option>
+            <option value="Eres bueno en algo en lo que tienes éxito normal o alto (no combate)">Don</option>
+            <option value="Permite tener profecías del futuro cuando el master lo crea">Dotes de Oráculo</option>
+            <option value="Posees un objeto místico">Dueño</option>
+            <option value="+1k0 a tiradas de Salvación">Duro de Matar</option>
+            <option value="Permite un encuentro fortuito tantas veces por roleada como nivel de ventaja">El Lugar Correcto, en el Momento Correcto</option>
+            <option value="+1 Trato con Animales, +1 Supervivencia con animales">Empatía Animal</option>
+            <option value="Elije un objeto inicial (no principalmente de combate) y empieza con él">Equipo Insignia</option>
+            <option value="+1k1 en Sigilo y tiradas de Carisma, pero solo para escapar">Escapista</option>
+            <option value="Puedes subir 2 habilidades de Armas distinta pagando -1 PH de lo normal">Especialista en Armas</option>
+            <option value="+1 PE">Estadística Adicional</option>
+            <option value="Pierdes las desventajas natas de tu raza (H6, E2, T3, F4, 6G y V5)">Excepcional</option>
+            <option value="Crece hasta 3 veces tu tamaño, +1 Intimidación, +1k0 de Fuerza y +2 movimiento">Expansión Rápida</option>
+            <option value="Alguien te debe una">Favorecido</option>
+            <option value="Por cada PH te envían 100 monedas de oro al final de cada mes">Fideicomiso</option>
+            <option value="Cada Carga cuenta como 2, pero -10 Concentración">Foco Centradas</option>
+            <option value="Te vuelves animal, ganas +2 de EV por Destreza y +1 PE acorde al animal">Forma Animal</option>
+            <option value="No necesita comer todos los días, se alimenta de la luz solar">Foto Metabolismo</option>
+            <option value="+0k1 en Precisión con Tiro con Arco si estas quieto por 1 ronda">Francotirador</option>
+            <option value="+5 tiradas sociales">Glamoroso</option>
+            <option value="+1k1 en tiradas (no daño o iniciativa) si comió hace menos de 30 minutos (platos completos)">Glotón</option>
+            <option value="+1k0 a tiradas de Fuerza, +1 Intimidación, -1 Social x circunstancia">Grande</option>
+            <option value="+1k1 a tiradas relacionadas a un ambiente">Guerrero de lo Salvaje</option>
+            <option value="Gana +1 nivel en una habilidad">Hábil</option>
+            <option value="Esta ventaja otorga un bono de +5 en el reconocimiento y uso de hierbas y brebajes">Herbología</option>
+            <option value="Cambias de sexo, posees ambos sistemas reproductivos">Hermafrodita</option>
+            <option value="Tienes múltiples identidades falsas, puedes comprar más de 1 vez esta">Identidad Alternativa</option>
+            <option value="+1 Subterfugio, +1k1 en tiradas de artesanía siempre que se describa con claridad">Improvisar</option>
+            <option value="+5/+10 resistencia a tiradas contra Mente">Indomable</option>
+            <option value="Recupera EP en la mitad de tiempo">Infatigable</option>
+            <option value="+1k1 en Investigación para descubrir algo nuevo">Innovador</option>
+            <option value="+5/+10 resistencia a tiradas contra Espíritu">Inquebrantable</option>
+            <option value="No sientes dolor, +1k1 en resistencia a Climas y Venenos">Insensible al Dolor</option>
+            <option value="Realiza tiradas de Alerta con Destreza">Instinto</option>
+            <option value="+1k1 en tiradas para luchar por causa noble (no combate">Justo</option>
+            <option value="+5 de Rango">Larga Distancia</option>
+            <option value="Gana +1k1 cuando sigue a su líder">Leal</option>
+            <option value="Lee 200 páginas en 10 minutos">Leer Rápido</option>
+            <option value="Gana 1 idioma adicional por punto en Lingüística">Lingüística Natural</option>
+            <option value="+3 Iniciativa y +1 Acción Mayor el 1er turno de combate">Listo para el Combate</option>
+            <option value="Suma +3, +7, +11 (+4), a tiradas de aliados de habilidades que superes en 1, 2, 3 o más niveles">Maestro</option>
+            <option value="Conoce rituales del PDF y +1k1 para entender otros">Maestro de Ceremonias</option>
+            <option value="+1k0 en tiradas de usar/lanzar/combatir con cuchillos y objetos similares">Malabarista</option>
+            <option value="Agarra armas a dos manos con una mano">Mano de Titan</option>
+            <option value="+0k1 daño a Golpes/Garras">Manos de Piedra</option>
+            <option value="Animal que acompaña al personaje, el jugador deberá manejar 2 fichas o podrá ser un NPC presente en todo momento">Mascota</option>
+            <option value="Permite ver fantasmas y espíritus">Medium</option>
+            <option value="+1k1 en tiradas de Bravura, reputación temida, pero -5 tiradas sociales en ciertos casos">Mejor ser Temido que Amado</option>
+            <option value="Tienes memoria perfecta no olvidando detalle">Memoria Eidética</option>
+            <option value="El Master ayuda a los jugadores, a más alto más ayuda">Mente Analítica</option>
+            <option value="Maestro que reduce el coste de subir 1, 2 o 3 habilidades en -1 PH">Mentor</option>
+            <option value="+5 tiradas de Alerta e Investigación si se toma su tiempo">Meticuloso</option>
+            <option value="+1 Alcance y +1 Movimiento Final">Miembros Largos</option>
+            <option value="+5 tirada para ayudar a los débiles (no jugadores)">Misericordioso</option>
+            <option value="Tantas veces como nivel de ventaja crea un objeto útil que es posible que lleves">Mochila Mágica</option>
+            <option value="+1 Equitación">Montura Solida</option>
+            <option value="+1 Supervivencia, +1 Cultura, +1 Empatía, +1 Subterfugio, +1 Cocina, +1 Comercio, +1 Investigación, +1 Lingüística, y +1 Batalla si estas en tu hogar">Nostálgico</option>
+            <option value="Tienes un trabajo del que no te pueden despedir, con salario">Ocupación</option>
+            <option value="+1k1 Alerta auditiva y tiradas relacionadas con el oído">Oído Agudo</option>
+            <option value="+1k1 Alerta de olfato y tiradas relacionadas con el olfato">Olfato Agudo</option>
+            <option value="Grupo religioso al que el personaje pertenece y puede asistirlo">Ordenación Religiosa</option>
+            <option value="+1k1 en tiradas para perseguir o buscar a quien escapa">Perseguidor</option>
+            <option value="Suma 5+Nivel de Personaje de daño a goles con puños, y a quien te ataque melee o este adyacente, -1k1 tiradas sociales donde afecte">Piel Espinosa</option>
+            <option value="+1k1 Atletismo bajo el Agua y no penaliza movimiento en esta">Piernas de Delfín</option>
+            <option value="+1 Sigilo, +15 dificultad a rastrearte">Pisada sin Rastro</option>
+            <option value="Aprende Skill de una técnica">Pony de Un Solo Truco</option>
+            <option value="Repite 9 en tiradas sociales en tu primer encuentro">Primeras Impresiones</option>
+            <option value="+1 Medicina y puede improvisar">Primeros Auxilios</option>
+            <option value="+1 Empatía, +1 Subterfugio, +1 Comercio si hablaste con el NPC con anterioridad">Psico-Analista</option>
+            <option value="Conoces historia de lugar u objeto inanimado, tira Entendimiento y saca 20 o más para tener la info">Psicometría</option>
+            <option value="+1k0 Iniciativa, +1 Atletismo">Rápido</option>
+            <option value="+1 Academicismo y tirada de Bravura para resistir buscar libros">Ratón de Biblioteca</option>
+            <option value="Grupo que proporciona información">Red de Información</option>
+            <option value="Cuesta 10 de EP activar (3 PH x ronda) recuperas Cuerpo de HP por ronda">Regeneración</option>
+            <option value="Reconocimiento entre ciudades o naciones, facilita algunas acciones">Renombre</>
+            <option value="+10 tiradas para resistir Toxinas o Enfermedades">Resistencia a Toxinas/Patógenos</option>
+            <option value="Suma +10/+20 resistir climas">Resistencia Climática</option>
+            <option value="La gravedad no te afecta negativamente">Resistencia Gravitacional</option>
+            <option value="2/4/6 de Resistencia Mágica">Resistencia Mágica</option>
+            <option value="Empiezas con 25 monedas de oro por punto en esta">Rico</option>
+            <option value="+1 habilidades de Conocimiento">Sabio</option>
+            <option value="Optimizar Acción cuesta la mitad de EP">Segundo Aliento</option>
+            <option value="+5 tiradas sociales, +10 fiestas">Sentido de la Moda</option>
+            <option value="El GM lanza 1d10 si hay peligro, si obtiene 10 te alerta de esto. +1 por nivel en ventaja">Sentido del Peligro</option>
+            <option value="No necesitas respirar">Sin Aliento</option>
+            <option value="No tiene penalizador en Alerta mientras está dormido">Sueño Ligero</option>
+            <option value="Repite 1, 2 o 3 tiradas por sesión">Suerte</option>
+            <option value="+1k1 tiradas relacionadas con tacto o gusto">Tacto Agudo</option>
+            <option value="+10 a conducir, +1k1 en combate en vehículos (menos daño) y +1k0 iniciativa">Talento al Volante</option>
+            <option value="+1k1 para analizar/valuar objetos">Tasador</option>
+            <option value="+1k1 a tiradas donde enfrentes peligro">Temerario</option>
+            <option value="+1 Interpretación y sabes la hora en todo momento">Tiempo Perfecto</option>
+            <option value="Título de realeza, da facilidades, reconocimiento y un prospecto a futuro, puede acarrear deberes">Titulo</option>
+            <option value="No pierde EP por realizar Ataque Total">Todo o Nada</option>
+            <option value="Haces crecer plantitas">Toque de la Naturaleza</option>
+            <option value="+10 interrogación si se aplica dolor">Torturador</option>
+            <option value="No mueres la primera vez que fallas tirada de salvación">Vida Extra</option>
+            <option value="Comunicación telepática con 1 objetivo, agrega 1+ por nivel de ventaja">Vinculo Mental</option>
+            <option value="Ves en todos tus alrededores al mismo tiempo">Visión 360</option>
+            <option value="Ves en la oscuridad sin penalizador">Visión Nocturna</option>
+            <option value="+1k1 Alerta visual y tiradas relacionadas con la vista (no precisión)">Visión Privilegiada</option>
+            <option value="Visión calórica que atraviesa paredes">Visión Térmica</option>
+            <option value="+1k1 Precisión si posee ventaja de terreno">Vista Certera</option>
+            <option value="+1k1 tiradas contra miedo/intimidación y +10 resistir persuasiones">Voluntad de Hierro</option>
+        </select>
+        <input class="cv" type="number" name="attr_ventaja_coste" value="1">
+        <div class="sheet-auto-expand">
+          <span name="attr_x"></span>
+          <textarea name="attr_ventajas"></textarea>
+        </div>
+    </div>
+</fieldset>
+</div>
+</div>
+
+<div class="desventa">
+  <div>
+    <label class="djs">Desventajas</label>
+    </div>
+    <div class="desven-gridcosas">
+    <fieldset class="repeating_desventajas">
+        <div class="desventajas">
+            <select class="nd" name="attr_desventajas">
+          <option value="-" selected>(Elegir)</option>
+            <option value="A consumir una sustancia, resiste con Fe o Constitución por unas horas">Adicción</option>
+            <option value="+5 tiradas sociales con amigos y familia, -10 a todo sin estos">Afable</option>
+            <option value="Lanza Bravura o Fe, supera 20+ o tomaras la opción más mortal posible">Al Filo del Cuchillo</option>
+            <option value="Problemas con luz intensa o igual problema que vampiros a la luz solar">Albino</option>
+            <option value="No recuerda su pasado, pero el jugador decide su historia pasada">Amnesia</option>
+            <option value="-5/-10 tiradas sociales">Antisocial</option>
+            <option value="Posees un objeto del que no quieres separarte y si lo pierdes harás lo que sea para recuperarlo">Apego Emocional</option>
+            <option value="-5 Iniciativa y -1k1 en todas las tiradas (no iniciativa o daño) en el primer turno de combate">Arranque Lento</option>
+            <option value="Imposibilita el uso de articulación por un tiempo (minutos) si falla concentración, afecta a un miembro una vez cada cierto tiempo, una por partida o varias por partida">Artrosis </option>
+            <option value="-5 en las tiradas por el día cuando recuerda su trauma">Atormentado</option>
+            <option value="Intenta conseguir dinero y no lo suelta fácilmente, se resiste con Fe">Avaro</option>
+            <option value="-2 Movimiento y dificultad de manejar/alcanzar objetos">Bajo</option>
+            <option value="Criaturas de la oscuridad y espíritus malignos desean comerte">Beacon</option>
+            <option value="Te comportas como salvaje y -5 tiradas sociales">Bestia</option>
+            <option value="-1 Sigilo, no ilumina lugares oscuros">Bio-Luminosidad</option>
+            <option value="No mata, cada vez que lo intente supera tirada de Fe o no podrás actuar">Blando de Corazón</option>
+            <option value="-5 tiradas de Alerta y Precisión en la oscuridad">Ceguera Nocturna</option>
+            <option value="Los ciclos de la luna deciden tus emociones/comportamientos">Ciclo Lunar</option>
+            <option value="No puede ver, -10 de Evasión, -15 de Precisión y falla tiradas de Alerta visual">Ciego</option>
+            <option value="Tira Bravura o Fe, obtén 20+ o intentas robar">Cleptomanía</option>
+            <option value="Busca pelea ante insultos o provocaciones, supera Fe para resistir">Colérico</option>
+            <option value="-1 Alerta, -1 Investigación">Colgado</option>
+            <option value="Si algo malo le pasa a alguien que te importa te sentís responsable, y sufrís depresión crónica por un 15-Fe días">Complejo de Culpa</option>
+            <option value="A realizar acciones, resiste con Fe o Constitución por unas horas">Compulsión</option>
+            <option value="Te confunden con alguien malo, a mayor nivel peor es la persona">Confusión de Identidad</option>
+            <option value="-10 resistencia física">Corazón Débil</option>
+            <option value="No ve a más de 20/10 metros (puede afectar Alerta)">Corto de Vista</option>
+            <option value="-5 tiradas sociales relacionadas con esta">Costumbres Personales Molestas</option>
+            <option value="-1k1 a tiradas sociales el primer día sin lujos, -1k1 al resto (no Iniciativa o daño) a partir del tercer día">Criatura de Conforte</option>
+            <option value="Tienes cara de mal tipo">Culpabilidad</option>
+            <option value="Cura sus heridas a la mitad del ritmo normal (no mágicas)">Curación Lenta</option>
+            <option value="No ves colores">Daltonismo</option>
+            <option value="Le debe lealtad a un grupo">Deber</option>
+            <option value="Rasgo de tu personaje que lo afectan en un área o habilidad">Deformidad</option>
+            <option value="Los carnívoros desean comerte">Delicioso</option>
+            <option value="Dependes de sustancia para vivir, más rara más puntos da">Dependencia</option>
+            <option value="Tira Bravura o Fe para hacer cosas, Fe o Bravura para resistir cuando te empujan a hacer cosas, si fallas lo sigues con apatía">Depresión Crónica</option>
+            <option value="Debes gastar 50% de tu dinero al llegar a un pueblo o similar">Derrochador</option>
+            <option value="En tiradas de suerte del personaje te pueden hacer repetir una vez la tirada">Desafortunado</option>
+            <option value="Las maldiciones te pegan +10, no requiere tirada para aplicarlas y +5 a sus efectos">Destino Maldito</option>
+            <option value="Solo puedes comer ciertas cosas, a más nivel más específica">Dieta Restrictiva</option>
+            <option value="-5 tiradas de expresión oral">Dificultad del Habla</option>
+            <option value="El personaje tiene una segunda personalidad">Doble Personalidad</option>
+            <option value="-5 en todas las tiradas si se levantó hace menos de 30 a 60 minutos">Dormilón</option>
+            <option value="Manifestaciones sobrenaturales o rasgos extraños en tu personaje">Eco</option>
+            <option value="NPC que te quiere muerto, a más puntos más fuerte es">Enemigo</option>
+            <option value="Recurrir al cuadro">Enfermedad</option>
+            <option value="-5/-10 tiradas para resistir enfermedades">Enfermizo</option>
+            <option value="En situaciones de tensión o elección del master, quedara inutilizado por 1d10+5 rondas">Epilepsia</option>
+            <option value="-1k1 ante sucesos sobrenaturales o sin explicación científica">Escéptico</option>
+            <option value="-1k1 en tiradas sociales con grupos grandes de persona">Estigma Social</option>
+            <option value="Tira Fe o Bravura cuando termina el combate supera 15+ nivel enemigo o por 30 minutos tendrás -10 en todo">Estrés Post Combate</option>
+            <option value="-1k1 en tiradas sociales si se cumple cierta condición">Estrés Social</option>
+            <option value="-5 en tiradas sociales">Excentricidad</option>
+            <option value="Estas dispuesto a morir por tu credo e intentas convertir a otros a este">Fanatismo</option>
+            <option value="Un espectro te sigue, a mayor coste más molesto será">Fantasma</option>
+            <option value="-1k1 en tiradas sociales">Feo</option>
+            <option value="-1k1 a tiradas si se enfrenta a su miedo, se ignora penalizador con Bravura y el coste depende del nivel">Fobia</option>
+            <option value="Regalas tu dinero, das limosnas">Generoso</option>
+            <option value="-10 Atletismo, -10 Equitación, y -10 a tiradas relacionadas">Gordo</option>
+            <option value="-1k1/-2k2 a lo relacionado a la tecnología y ocurren incidentes con esta">Gremlin</option>
+            <option value="Lanza 1d10 cada mañana, superar 3 + 1xdia o pierdes 1 Nivel de HP">Herida Permanente</option>
+            <option value="-5/-10 tiradas para resistir toxinas o comidas podridas">Hígado Débil</option>
+            <option value="No puedes mentir, se resiste con Fe">Incapaz de Mentir</option>
+            <option value="No puedes elegir entre opciones, tira Fe o Bravura, 15 + 5 por elección para elegir">Indeciso</option>
+            <option value="-1k1 tiradas contra Intimidación">Inepto en una Habilidad (Cobarde)</option>
+            <option value="-1k1 Empatía para distinguir mentiras">Inepto en una Habilidad (Credulo)</option>
+            <option value="-1k1 tiradas visuales (no precisión)">Inepto en una Habilidad (Defecto Visual)</option>
+            <option value="-1 Subterfugio">Inepto en una Habilidad (Dificultad para Mentir)</option>
+            <option value="-1k1 tiradas auditivas">Inepto en una Habilidad (Duro de Oído)</option>
+            <option value="-1k1 tiradas de Atletismo para correr">Inepto en una Habilidad (Patoso)</option>
+            <option value="Tira Constitución obtén 20+ no dormís 4 horas, fallas una 2da vez, no dormís">Insomnio</option>
+            <option value="Toma riesgos por la curiosidad pura, se resiste con Bravura">La Curiosidad Mato al Gato</option>
+            <option value="Tirada de Fe/Bravura para resistir impulso de gritar tu nombre, onocer su presencia, pero si grita su nombre gk1 en la primera ronda">Leeroy Jenkins</option>
+            <option value="Tira Fe y obtén 18+ o intenta movida en alguien de tu orientación sexual">Libertinaje</option>
+            <option value="Sufres doble de daño de sangrados y no requiere tiradas para aplicarlas">Mala Coagulación</option>
+            <option value="Lanza 1d100 y el GM decide tu destino">Mala Fortuna</option>
+            <option value="Reputación que puede afectarlo en ciertas situaciones">Mala Reputación</option>
+            <option value="-1 HP por Nivel, -1k1 resistir venenos y enfermedades">Mala Salud</option>
+            <option value="Te obligan a repetir 1, 2 o 3 tiradas por sesión">Mala Suerte</option>
+            <option value="-1 EP por Nivel, -1k1 contra seducción o tiradas de voluntad">Mala Voluntad</option>
+            <option value="Un ente poderoso te maldijo, 3 niveles: 1er una vez por día no repetís 0, 2do te buscara al igual que sus esbirros y 3er te fuerza a realizar un acto especifico o mueres">Maldito</option>
+            <option value="Tira 1d10 diario, si 5- estas triste hasta decaído, 6+ alegre hasta euforia">Maniaco Depresivo</option>
+            <option value="-10 tiradas de Armas (de Destreza), Pericias, Interpretación y Atletismo que usen manos">Manos Inestables</option>
+            <option value="Requieres diario, semanal o mensualmente cierto mantenimiento">Mantenimiento</option>
+            <option value="Deja una marca como prueba de tu victoria, a más nivel más estrafalaria es">Marca Característica</option>
+            <option value="No recuerda su pasado">Memoria Perdida</option>
+            <option value="-1 MP por Nivel, -1k1 contra seducción o tiradas de memoria">Mente Frágil</option>
+            <option value="Tu opinión, actos y demás son ignorados o menospreciados">Minoría Cultural</option>
+            <option value="-10 tiradas visuales y reduce rango en ¼">Miopía</option>
+            <option value="No puede hablar, -1k1 en tiradas de Carisma (menos Empatía para mentiras)">Mudo</option>
+            <option value="-5 tiradas relacionadas con lo perdido, pero +5 para reputación por esto">Mutilado</option>
+            <option value="-5 tiradas sociales por circunstancias, y dificultades sociales por edad">Niño</option>
+            <option value="Se flagela y pierde 1 nivel de HP a las mañanas, si se lo curan intenta perderlo y si descubren esto -1k1 tiradas sociales">No daño, No Sirve</option>
+            <option value="Duermes de día">Nocturno</option>
+            <option value="In objetivo por el que deja atrás a sus aliados/amigos, se resiste con Fe">Obsesión</option>
+            <option value="Al empezar un combate lanza 1d10, con 8 o -, no actúas y pierdes evasión, -2 dificultad por ronda">Parálisis de Combate</option>
+            <option value="Desconfías de todo, eres demasiado cauteloso, -1 Empatía">Paranoia</option>
+            <option value="Lanza Bravura al despertar, si fallas la tirada -1k1 por el resto del día">Pesadilla</option>
+            <option value="Das miedo, -10 tiradas sociales con desconocidos y animales">Presencia Inquietante</option>
+            <option value="Los accidentes te persiguen">Propenso a Accidentes</option>
+            <option value="Recuperar EP tarda el doble">Recuperación Lenta</option>
+            <option value="Errores del pasado te atormentan e intentaras corregirlos/jamás repetirlos">Remordimiento</option>
+            <option value="Adicción a infligir daño, tira Bravura o Fe, si no superas 15+ toma esta acción, aunque no sea el momento">Sadismo</option>
+            <option value="Conoces un secreto, si se enteran que lo sabes te perseguirán">Secreto</option>
+            <option value="El GM te revela un secreto peligroso">Secreto Siniestro</option>
+            <option value="Intentas cegar vida en todo combate">Sed de Sangre</option>
+            <option value="Te tratan de menos por tu raza, sexo o preferencias">Sexo/raza/orientación discriminada</option>
+            <option value="-10 tiradas para desplazarse, -2 de Movimiento final">Sin Pierna</option>
+            <option value="-5 o -10 a tus tiradas (no Iniciativa o daño) si perdiste al menos 1 lvl de HP hasta terminar el combate">Sin Tolerancia al Dolor</option>
+            <option value="Tira 10, con 2 o menos caminas dormido">Sonámbulo</option>
+            <option value="No puede escuchar, +15 dificultad o imposible tiradas de Alerta">Sordo</option>
+            <option value="Ciertos actos o actividades que tu personaje no realiza">Tabú</option>
+            <option value="El master tira un dado en secreto, y en esa cantidad de roleadas se muere el personaje">Tiempo Prestado</option>
+            <option value="Eres tímido, viene en 3 niveles, 1er -5 tiradas sociales en primeros encuentros, 2do -10 sociales amigos no tan cercanos, y 3er -15 tiradas sociales en todo">Timidez</option>
+            <option value="Eres frio y marchitas plantitas">Toque de Escarcha</option>
+            <option value="-10 en tiradas del miembro lacerado, si es una pierna -1 movimiento final">Tullido</option>
+            <option value="Promesa a deidad que jamás podrás romper">Voto</option>
+            <option value="Un elemento u objeto te hace daño irreducible y para curar (no mágico) se requiere el doble de esfuerzo">Vulnerabilidad a la Magia/Elemento</option>
+          </select>
+          <input class="cd" type="number" name="attr_desventaja_coste" value="1">
+          <div class="sheet-auto-expand2">
+            <span name="attr_x2"></span>
+            <textarea name="attr_desventajas"></textarea>
+          </div>
+      </div>
+  </fieldset>
+</div>
+</div>
+
+<h1 class="te">Tecnicas</h1>
+  <div class="tecnicastodo">
+<fieldset class="repeating_tecnicas">
+  <div class="tecnicas">
+  <input class="tecnican" type="text" class="hidden" name="attr_tecnica_nombre" placeholder="Nombre de la Tecnica" ></input>
+  <textarea class="tecnicad" name="attr_tecnica" placeholder="Beneficios de la Tecnica" spellcheck="false"></textarea>
+  </div>
+</fieldset>
+</div>
+
+  </div>
+</div>
+
+<!--Hoja de Combate-->
+<div class="sheet-hojacombate">
+
+  <div class="combatetodo">
+
+<div class="cuerpocomb">   
+  <div class="cue2"><button class="buttonstylesss" name="roll_cuerpo" type="roll" value="&{template:default} {{name=Cuerpo}} {{Resultado=[[@{cuerpo}d10!!+@{cuerpo_flat}]]}}"><h2>Cuerpo</h2></button>
+    <input type="number" name="attr_cuerpo" value="0" title="@{cuerpo}" readonly>
+  </div>
+  <input type="hidden" name="attr_cuerpo_base" value="3" >
+  <input type="hidden" name="attr_cuerpo_talent" value="0" readonly>
+  <input type="hidden" name="attr_cuerpo_item" value="0" readonly>
+  <input type="hidden" name="attr_cuerpo_buff" value="0" readonly>
+  <input type="hidden" name="attr_cuerpo_fijo" value="0" readonly>
+
+<div class="comb-hp1">
+  <label>Vida</label>
+  <input type="hidden" name="attr_hp_base" value="3" >
+  <input type="hidden" name="attr_hp_talent" value="0" readonly>
+  <input type="hidden" name="attr_hp_item" value="0" readonly>
+  <input type="hidden" name="attr_hp_buff" value="0" readonly>
+  <input type="hidden" name="attr_hp_fijo" value="0" readonly>
+  <input type="number" name="attr_hp" value="0" title="@{hp}" readonly>
+  <input type="number" name="attr_hp" value="0" title="@{hp}" readonly>
+  <input type="number" name="attr_hp" value="0" title="@{hp}" readonly>
+  <input type="number" name="attr_hp" value="0" title="@{hp}" readonly>
+  <input type="number" name="attr_hp" value="0" title="@{hp}" readonly>
+  <input type="number" name="attr_hp" value="0" title="@{hp}" readonly>
+</div>
+
+<div class="comb-hp2">
+  <label>Vida Total</label>
+  <input type="hidden" name="attr_hptot_base" value="15" readonly>
+  <input type="hidden" name="attr_hptot_talent" value="0" readonly>
+  <input type="hidden" name="attr_hptot_item" value="0" readonly>
+  <input type="hidden" name="attr_hptot_buff" value="0" readonly>
+  <input type="hidden" name="attr_hptot_fijo" value="0" readonly>
+  <input type="hidden" name="attr_hptot" value="0" title="@{hptot}" readonly>
+  <div class="hpc"><input class="hpf3" type="number" name="attr_hptotal" value="@{hptotal}" title="@{hptotal}"><input class="hpf4" type="number" name="attr_hptotal_max" title="@{hptotal_max}" value="" readonly/></div>
+</div>
+</div> 
+
+<div class="mentecomb">  
+        <div class="men2"><button class="buttonstylesss" name="roll_mente" type="roll" value="&{template:default} {{name=Mente}} {{Resultado=[[@{mente}d10!!+@{mente_flat}]]}}"><h2>Mente</h2></button>
+          <input type="number" name="attr_mente" value="0" title="@{mente}" readonly>
+        </div>
+  <input type="hidden" name="attr_mente_base" value="2" >
+  <input type="hidden" name="attr_mente_talent" value="0" readonly>
+  <input type="hidden" name="attr_mente_item" value="0" readonly>
+  <input type="hidden" name="attr_mente_buff" value="0" readonly>
+  <input type="hidden" name="attr_mente_fijo" value="0" readonly>
+
+<div class="comb-mp1">
+  <label>Mana</label>
+  <input type="hidden" name="attr_mp_base" value="2" >
+  <input type="hidden" name="attr_mp_talent" value="0" readonly>
+  <input type="hidden" name="attr_mp_item" value="0" readonly>
+  <input type="hidden" name="attr_mp_buff" value="0" readonly>
+  <input type="hidden" name="attr_mp_fijo" value="0" readonly>
+ <input type="number" name="attr_mp" value="0" title="@{mp}" readonly>
+ <input type="number" name="attr_mp" value="0" title="@{mp}" readonly>
+ <input type="number" name="attr_mp" value="0" title="@{mp}" readonly>
+ <input type="number" name="attr_mp" value="0" title="@{mp}" readonly>
+ <input type="number" name="attr_mp" value="0" title="@{mp}" readonly>
+ <input type="number" name="attr_mp" value="0" title="@{mp}" readonly>
+</div>
+
+<div class="comb-mp2">
+  <label>Mana Total</label>
+  <input type="hidden" name="attr_mptot_base" value="12" readonly>
+  <input type="hidden" name="attr_mptot_talent" value="0" readonly>
+  <input type="hidden" name="attr_mptot_item" value="0" readonly>
+  <input type="hidden" name="attr_mptot_buff" value="0" readonly>
+  <input type="hidden" name="attr_mptot_fijo" value="0" readonly>
+  <input type="hidden" name="attr_mptot_max" value="0" title="@{mptot}" readonly>
+  <div class="mpc"><input class="mpf3" type="number" name="attr_mptotal" value="" title="@{mptotal}"><input class="mpf4" type="number" name="attr_mptotal_max" title="@{mptotal_max}" value="" readonly/></div>
+</div>
+</div> 
+
+<div class="espiritucomb">  
+  <div class="esp2"><button class="buttonstylesss" name="roll_espiritu" type="roll" value="&{template:default} {{name=Espíritu}} {{Resultado=[[@{espiritu}d10!!+@{espiritu_flat}]]}}"><h2>Espíritu</h2></button>
+    <input type="number" name="attr_espiritu" value="0" title="@{espiritu}" readonly>
+  </div>
+  <input type="hidden" name="attr_espiritu_base" value="2" >
+  <input type="hidden" name="attr_espiritu_talent" value="0" readonly>
+  <input type="hidden" name="attr_espiritu_item" value="0" readonly>
+  <input type="hidden" name="attr_espiritu_buff" value="0" readonly>
+  <input type="hidden" name="attr_espiritu_fijo" value="0" readonly>
+
+
+<div class="comb-ep1">
+  <label>Energía</label>
+  <input type="hidden" name="attr_ep_base" value="3" >
+  <input type="hidden" name="attr_ep_talent" value="0" readonly>
+  <input type="hidden" name="attr_ep_item" value="0" readonly>
+  <input type="hidden" name="attr_ep_buff" value="0" readonly>
+  <input type="hidden" name="attr_ep_fijo" value="0" readonly>
+ <input type="number" name="attr_ep" value="0" title="@{ep}" readonly>
+ <input type="number" name="attr_ep" value="0" title="@{ep}" readonly>
+ <input type="number" name="attr_ep" value="0" title="@{ep}" readonly>
+ <input type="number" name="attr_ep" value="0" title="@{ep}" readonly>
+ <input type="number" name="attr_ep" value="0" title="@{ep}" readonly>
+ <input type="number" name="attr_ep" value="0" title="@{ep}" readonly>
+</div>
+
+<div class="comb-ep2">
+  <label>Energía Total</label>
+  <input type="hidden" name="attr_eptot_base" value="15" readonly>
+  <input type="hidden" name="attr_eptot_talent" value="0" readonly>
+  <input type="hidden" name="attr_eptot_item" value="0" readonly>
+  <input type="hidden" name="attr_eptot_buff" value="0" readonly>
+  <input type="hidden" name="attr_eptot_fijo" value="0" readonly>
+  <input type="hidden" name="attr_eptot_max" value="0" title="@{eptot_max}" readonly>
+  <div class="epc"><input class="epf3" type="number" name="attr_eptotal" value="" title="@{eptotal}"><input class="epf4" type="number" name="attr_eptotal_max" title="@{eptotal_max}" value="" readonly/></div>    
+</div>
+</div> 
+
+<div class="cec">
+<div class="combatecosas">
+<div class="estadisticas-iniciativa">
+  <label>Iniciativa</label>
+  <input type="hidden" name="attr_init_base" value="1">
+  <input type="hidden" name="attr_init_talent" value="0" readonly>
+  <input type="hidden" name="attr_init_item" value="0" readonly>
+  <input type="hidden" name="attr_init_buff" value="0" readonly>
+  <input type="hidden" name="attr_init_fijo" value="0" readonly>
+<input type="hidden" name="attr_init" value="0" title="@{init}" readonly>
+
+
+<div class="estadisticas-individuales">
+  <input type="hidden" name="attr_inik_base" value="1">
+  <input type="hidden" name="attr_inik_talent" value="0" readonly>
+  <input type="hidden" name="attr_inik_item" value="0" readonly>
+  <input type="hidden" name="attr_inik_buff" value="0" readonly>
+  <input type="hidden" name="attr_inik_fijo" value="0" readonly>
+<input type="hidden" name="attr_inik" value="0" title="@{inik}" readonly>
+</div>
+
+<input type="hidden" name="attr_init_flat" value="" title="@{init_flat}" readonly>
+
+<div class="stat-iniciativa">
+  <button class="buttonstyleini" name="roll_iniciativa" type="roll" value="&{template:default} {{name=Iniciativa}} {{Total=[[@{init}d10k@{inik}!!+(@{destreza}+@{init_flat})&{tracker}]]}} "><span class="inicc">Iniciativa</span></button>
+</div>
+</div>
+
+<div class="stat-amer">
+  <div class="stat-me">
+<div class="stat-movimiento">
+  <label>Movimiento</label>
+  <input type="hidden" name="attr_movimiento_base" value="0">
+  <input type="hidden" name="attr_movimiento_talent" value="0" readonly>
+  <input type="hidden" name="attr_movimiento_item" value="0" readonly>
+  <input type="hidden" name="attr_movimiento_buff" value="0" readonly>
+  <input type="hidden" name="attr_movimiento_fijo" value="0" readonly>
+ <input type="number" name="attr_movimiento" value="0" title="@{movimiento}" placeholder="4" readonly>
+</div>
+
+<div class="stat-evasion">
+  <label>Evasion</label>
+  <input type="hidden" name="attr_evasion_base" value="0" >
+  <input type="hidden" name="attr_evasion_talent" value="0" readonly>
+  <input type="hidden" name="attr_evasion_item" value="0" readonly>
+  <input type="hidden" name="attr_evasion_buff" value="0" readonly>
+  <input type="hidden" name="attr_evasion_fijo" value="0" readonly>
+ <input type="number" name="attr_evasion" value="0" title="@{evasion}" placeholder="5" readonly>
+</div>
+</div>
+
+<div class="stat-ar">
+<div class="stat-armadura">
+  <label>Armadura</label>
+  <input type="hidden" name="attr_armadura_base" value="2" >
+  <input type="hidden" name="attr_armadura_talent" value="0" readonly>
+  <input type="hidden" name="attr_armadura_item" value="0" readonly>
+  <input type="hidden" name="attr_armadura_buff" value="0" readonly>
+  <input type="hidden" name="attr_armadura_fijo" value="0" readonly>
+<input type="number" name="attr_armadura" value="0" title="@{armadura}" readonly>
+</div>
+
+<div class="stat-resistencia">
+  <label>Resistencia Magica</label>
+  <input type="hidden" name="attr_resistencia_base" value="1" >
+  <input type="hidden" name="attr_resistencia_talent" value="0" readonly>
+  <input type="hidden" name="attr_resistencia_item" value="0" readonly>
+  <input type="hidden" name="attr_resistencia_buff" value="0" readonly>
+  <input type="hidden" name="attr_resistencia_fijo" value="0" readonly>
+  <input type="number" name="attr_resistencia" value="0" title="@{resistencia}" readonly>
+</div>
+</div>
+</div>
+
+<div class="ataque-todo">
+  <div class="accydmg">
+<div class="stat-acc">
+<label>Presición - Estadistica</label>
+<div class="repeating_accs">
+  <select name="attr_accs">
+    <option value="-">(Elegir)</option>
+    <option value="@{fuerza}">Fuerza</option>
+    <option value="@{destreza}">Destreza</option>
+    <option value="@{constitucion}">Constitución</option>
+    <option value="@{entendimiento}">Entendimiento</option>
+    <option value="@{fe}">Fe</option>
+    <option value="@{bravura}">Bravura</option>
+    <option value="@{carisma}">Carisma</option>
+  </div>
+</select>
+</div>
+
+<div class="stat-dmg">
+<label>Daño - Estadistica</label>
+<div class="repeating_dmgs">
+  <select name="attr_dmgs">
+    <option value="-">(Elegir)</option>
+    <option value="@{fuerza}">Fuerza</option>
+    <option value="@{destreza}">Destreza</option>
+    <option value="@{constitucion}">Constitución</option>
+    <option value="@{entendimiento}">Entendimiento</option>
+    <option value="@{fe}">Fe</option>
+    <option value="@{bravura}">Bravura</option>
+    <option value="@{carisma}">Carisma</option>
+ </div>
+</select>
+</div> 
+
+<div class="stat-arma">
+<label>Daño de Arma</label>
+  <input type="number" name="attr_armati_base" value="0">
+  <input type="hidden" name="attr_armati_talent" value="0">
+  <input type="hidden" name="attr_armati_item" value="0">
+  <input type="hidden" name="attr_armati_buff" value="0">
+  <input type="hidden" name="attr_armati_fijo" value="0" readonly>
+  <input type="hidden" name="attr_armati" value="@{armati}" title="@{armati}">
+  
+  <input type="number" name="attr_armake_base" value="0">
+  <input type="hidden" name="attr_armake_talent" value="0">
+  <input type="hidden" name="attr_armake_item" value="0">
+  <input type="hidden" name="attr_armake_buff" value="0">
+  <input type="hidden" name="attr_armake_fijo" value="0" readonly>
+  <input type="hidden" name="attr_armake" value="@{armake}" title="@{armake}">
+</div>
+
+<div class="estadisticas-individuales">
+  <input type="hidden" name="attr_acct_base" value="0">
+  <input type="hidden" name="attr_acct_talent" value="0" readonly>
+  <input type="hidden" name="attr_acct_item" value="0" readonly>
+  <input type="hidden" name="attr_acct_buff" value="0" readonly>
+  <input type="hidden" name="attr_acct_fijo" value="0" readonly>
+<input type="hidden" name="attr_acct" value="0" title="@{acct}" readonly>
+</div>
+
+<div class="estadisticas-individuales">
+  <input type="hidden" name="attr_acck_base" value="0">
+  <input type="hidden" name="attr_acck_talent" value="0" readonly>
+  <input type="hidden" name="attr_acck_item" value="0" readonly>
+  <input type="hidden" name="attr_acck_buff" value="0" readonly>
+  <input type="hidden" name="attr_acck_fijo" value="0" readonly>
+<input type="hidden" name="attr_acck" value="0" title="@{acck}" readonly>
+</div>
+
+<div class="estadisticas-individuales">
+  <input type="hidden" name="attr_dmgt_base" value="0">
+  <input type="hidden" name="attr_dmgt_talent" value="0" readonly>
+  <input type="hidden" name="attr_dmgt_item" value="0" readonly>
+  <input type="hidden" name="attr_dmgt_buff" value="0" readonly>
+  <input type="hidden" name="attr_dmgt_fijo" value="0" readonly>
+<input type="hidden" name="attr_dmgt" value="0" title="@{dmgt}" readonly>
+</div>
+
+<div class="estadisticas-individuales">
+  <input type="hidden" name="attr_dmgk_base" value="0">
+  <input type="hidden" name="attr_dmgk_talent" value="0" readonly>
+  <input type="hidden" name="attr_dmgk_item" value="0" readonly>
+  <input type="hidden" name="attr_dmgk_buff" value="0" readonly>
+  <input type="hidden" name="attr_dmgk_fijo" value="0" readonly>
+<input type="hidden" name="attr_dmgk" value="0" title="@{dmgk}" readonly>
+</div>
+
+<div class="estadisticas-individuales">
+  <input type="hidden" name="attr_spelltir_base" value="0">
+  <input type="hidden" name="attr_spelltir_talent" value="0" readonly>
+  <input type="hidden" name="attr_spelltir_item" value="0" readonly>
+  <input type="hidden" name="attr_spelltir_buff" value="0" readonly>
+  <input type="hidden" name="attr_spelltir_fijo" value="0" readonly>
+<input type="hidden" name="attr_spelltir" value="0" title="@{spelltir}" readonly>
+</div>
+
+<div class="estadisticas-individuales">
+  <input type="hidden" name="attr_spelldamage_base" value="0">
+  <input type="hidden" name="attr_spelldamage_talent" value="0" readonly>
+  <input type="hidden" name="attr_spelldamage_item" value="0" readonly>
+  <input type="hidden" name="attr_spelldamage_buff" value="0" readonly>
+  <input type="hidden" name="attr_spelldamage_fijo" value="0" readonly>
+<input type="hidden" name="attr_spelldamage" value="0" title="@{spelldamage}" readonly>
+</div>
+
+<div class="estadisticas-individuales">
+  <input type="hidden" name="attr_dmgk_flat_base" value="0">
+  <input type="hidden" name="attr_dmgk_flat_talent" value="0" readonly>
+  <input type="hidden" name="attr_dmgk_flat_item" value="0" readonly>
+  <input type="hidden" name="attr_dmgk_flat_buff" value="0" readonly>
+  <input type="hidden" name="attr_dmgk_flat_fijo" value="0" readonly>
+<input type="hidden" name="attr_dmgk_flat" value="0" title="@{dmgk_flat}" readonly>
+</div>
+</div>
+
+<div class="stat-attack">
+<button class="buttonstyl" name="roll_damage" type="roll" value="&{template:default} {{name=Ataque}} {{Presición=[[(@{armas}+@{acct}+@{accs}+@{destreza_tirada}+@{fuerza_tirada})d10k@{acck}!!+@{acck_flat}]]}} {{Daño=[[(@{armati}+@{dmgt}+@{dmgs}+@{destreza_tirada}+@{fuerza_tirada})d10k@{dmgk}!!+@{dmgk_flat}]]}} {{Notas=@{notasataque}}}"></button>
+</div>
+</div>
+
+<div class="notasat">
+  <textarea name="attr_notasataque"></textarea>
+</div>
+</div>
+
+<div class="equipo">
+  <div>
+  <label>Equipo</label>
+</div>
+  <fieldset class="repeating_items">
+      <div class="items">
+        <input type="text" class="nombrequipo" name="attr_item_nombre" placeholder="Objeto de Origen/Valor del Beneficio" >
+          <select class="equipobonus" name="attr_item_stat">
+            <option value="-" selected>(Elegir)</option>
+            <option value="fuerza">Fuerza</option>
+            <option value="fuerza_tirada">Fuerza Tirada</option>
+            <option value="fuerza_flat">Fuerza Fijo</option>
+            <option value="destreza">Destreza</option>
+            <option value="destreza_tirada">Destreza Tirada</option>
+            <option value="destreza_flat">Destreza Fijo</option>
+            <option value="constitucion">Constitución</option>
+            <option value="constitucion_tirada">Constitución Tirada</option>
+            <option value="constitucion_flat">Constitución Fijo</option>
+            <option value="entendimiento">Entendimiento</option>
+            <option value="entendimiento_tirada">Entendimiento Tirada</option>
+            <option value="entendimiento_flat">Entendimiento Fijo</option>
+            <option value="fe">Fe</option>
+            <option value="fe_tirada">Fe Tirada</option>
+            <option value="fe_flat">Fe Fijo</option>
+            <option value="bravura">Bravura</option>
+            <option value="bravura_tirada">Bravura Tirada</option>
+            <option value="bravura_flat">Bravura Fijo</option>
+            <option value="carisma">Carisma</option>
+            <option value="carisma_tirada">Carisma Tirada</option>
+            <option value="carisma_flat">Carisma Fijo</option>
+            <option value="academicismo">Academicismo</option>
+            <option value="academisismo_flat">Academicismo Fijo</option>    
+              <option value="alerta">Alerta</option>
+              <option value="alerta_flat">Alerta Fijo</option>
+              <option value="alquimia">Alquimia</option>
+              <option value="alquimia_flat">Alquimia Fijo</option>
+              <option value="armas">Armas</option>
+              <option value="armas_flat">Armas Fijo</option>
+              <option value="atletismo">Atletismo</option>
+              <option value="atletismo_flat">Atletismo Fijo</option>
+              <option value="batalla">Batalla</option>
+              <option value="batalla_flat">Batalla Fijo</option>
+              <option value="cocina">Cocina</option>
+              <option value="cocina_flat">Cocina Fijo</option>
+              <option value="comercio">Comercio</option>
+              <option value="comercio_flat">Comercio Fijo</option>
+              <option value="concentracion">Concentración</option>
+              <option value="concentracion_flat">Concentración Fijo</option>
+              <option value="conducir">Conducir</option>
+              <option value="conducir_flat">Conducir Fijo</option>
+              <option value="cultura">Cultura</option>
+              <option value="cultura_flat">Cultura Fijo</option>
+              <option value="defensa">Defensa</option>
+              <option value="defensa_flat">Defensa Fijo</option>
+              <option value="empatia">Empatia</option>
+              <option value="empatia_flat">Empatia Fijo</option>
+              <option value="equitacion">Equitación</option>
+              <option value="equitacion_flat">Equitación Fijo</option>
+              <option value="etiqueta">Etiqueta</option>
+              <option value="etiqueta_flat">Etiqueta Fijo</option>
+              <option value="hechiceria">Hechiceria</option>
+              <option value="hechiceria_flat">Hechiceria Fijo</option>
+              <option value="herreria">Herreria</option>
+              <option value="herreria_flat">Herreria Fijo</option>
+              <option value="informatica">Informática</option>
+              <option value="informatica_flat">Informática Fijo</option>
+              <option value="interpretacion">Interpretación</option>
+              <option value="interpretacion_flat">Interpretación Fijo</option>
+              <option value="intimidacion">Intimidación</option>
+              <option value="intimidacion_flat">Intimidación Fijo</option>
+              <option value="investigacion">Investigación</option>
+              <option value="investigacion_flat">Investigación Fijo</option>
+              <option value="liderazgo">Liderazgo</option>
+              <option value="liderazgo_flat">Liderazgo Fijo</option>
+              <option value="linguistica">Lingüística</option>
+              <option value="linguistica_flat">Lingüística Fijo</option>
+              <option value="mecanica">Mecanica</option>
+              <option value="mecanica_flat">Mecanica Fijo</option>
+              <option value="medicina">Medicina</option>
+              <option value="medicina_flat">Medicina Fijo</option>
+              <option value="ocultismo">Ocultismo</option>
+              <option value="ocultismo_flat">Ocultismo Fijo</option>
+              <option value="pericias">Pericias</option>
+              <option value="pericias_flat">Pericias Fijo</option>
+              <option value="sigilo">Sigilo</option>
+              <option value="sigilo_flat">Sigilo Fijo</option>
+              <option value="subterfugio">Subterfugio</option>
+              <option value="subterfugio_flat">Subterfugio Fijo</option>
+              <option value="supervivencia">Supervivencia</option>
+              <option value="supervivencia_flat">Supervivencia Fijo</option>
+              <option value="teologia">Teologia</option>
+              <option value="teologia_flat">Teologia Fijo</option>
+              <option value="tratoani">Trato con Animales</option>
+              <option value="tratoani_flat">Trato con Animales Fijo</option>
+              <option value="veneno">Venenos</option>
+              <option value="veneno_flat">Venenos Fijo</option>
+              <option value="acct">Presición Tirada</option>
+              <option value="acck">Presición Guardada</option>
+              <option value="acck_flat">Presición Fisica Fija</option>
+              <option value="dmgt">Daño Fisico Tirado</option>
+              <option value="dmgk">Daño Fisico Guardado</option>
+              <option value="dmgk_flat">Daño Fisico Fijo</option>
+              <option value="spelltir">Daño Magico Tirado</option>
+              <option value="spelldamage">Daño Magico Guardado</option>
+              <option value="spellheal">Curación Magica Guardada</option>
+              <option value="spelldamage_flat">Daño Magico Fijo</option>     
+              <option value="spellheal_flat">Curación Magica Fija</option>     
+                <option value="hp">Vida por Nivel</option>
+                <option value="mp">Mana por Nivel</option>
+                <option value="ep">Energía por Nivel</option>
+                <option value="hptot">Vida Total</option>
+                <option value="mptot">Mana Total</option>
+                <option value="eptot">Energía Total</option>
+                <option value="cuerpo">Cuerpo Total</option>
+                <option value="cuerpo_flat">Cuerpo Fijo</option>
+                <option value="mente">Mente Total</option>
+                <option value="mente_flat">Mente Fijo</option>
+                <option value="espiritu">Espíritu Total</option>
+                <option value="espiritu_flat">Espíritu Fijo</option>
+                <option value="evasion">Evasión</option>
+                <option value="armadura">Armadura</option>
+                <option value="resistencia">Resistencia Magica</option>
+                <option value="init">Iniciativa Tirada</option>
+                <option value="inik">Iniciativa Guardado</option>
+                <option value="init_flat">Iniciativa Fijo</option>
+                <option value="movimiento">Movimiento</option>   
+                <option value="conocimiento_flat">Conocimiento Fijo</option>
+                <option value="social_flat">Sociales Fijo</option>
+                <option value="proezas_flat">Proezas Fijo</option>
+          </select>
+          <input class="bonusequipo" type="number" name="attr_item_bonus" value="1">
+          <textarea type="text" class="demasdatosequipo" name="attr_demasdatosequipo" placeholder="Demas datos del equipo entran aqui"></textarea>
+          <input type="checkbox" class="custom-checkbox1" name="attr_item_active" value="1" checked>
+      </div>
+  </fieldset>
+</div>
+</div>
+
+<div class="bodyhechi">
+  <h2>Hechizos/Skills</h2>
+      <br>
+          <fieldset name="repeating_spells" class="repeating_spells">
+            <div class="spellsresto">
+<input class="spellname" type="text" name="attr_spell-name" title="@{repeating_spells_$X_spell-name}" class="sheet-spell" placeholder="Nombre del Hechizo">
+                      <tr>
+<div class="spellcost"><select name="attr_costehechi1">
+      <option>Coste MP</option>
+      <option>Coste EP</option>
+      <option>Coste HP</option>
+      <option>Sin Coste</option>
+</select>
+<input type="number" name="attr_spell-cast-value" title="@{repeating_spells_$X_spell-cast-value}" value="0" class="spellcosth">
+</div>
+<div class="spellcost2"><select name="attr_costehechi2">
+  <option selected style="text-align: center">-</option>
+      <option>Coste MP</option>
+      <option>Coste EP</option>
+      <option>Coste HP</option>
+      <option>Sin Coste</option>
+</select>
+  <input type="number" name="attr_spell-cast-value2" title="@{repeating_spells_$X_spell-cast-value2}" value="" class="spellcosth2">
+  </div>
+<div class="spelldice">
+  <button type="roll" class="buttonstyleh" name="roll_spell-template" title="%{repeating_spells_$X_spell-template}" value="&{template:default}{{name=@{spell-name}}}{{Rango=@{spell-range}}}{{Area=@{spell-aoe}}}{{Daño=[[[[@{spelltir}+@{spell-damaget})]]d10k[[@{spelldamage}+@{spell-damage}]]!!]]}}{{Daño Fijo=[[@{spell-damage-fijo}+@{spelldamage_flat}+@{hechiceria_flat}]]}}{{Curación=[[[[@{spelltir}+@{spell-healingt}]]d10k[[@{spellheal}+@{spell-healing}]]!!]]}}{{Curación Fija=[[@{spell-healing-fijo}+@{hechiceria_flat}+@{spellheal_flat}]]}}{{Objetivos=@{spell-target}}}{{Duración=@{spell-duration}}}{{Elemento=@{spell-damage-type}}}{{Efecto=@{spell-effect}}}"><label>Hechizo</label></button>
+  <button type="roll" class="buttonstyleh2" name="roll_spell-template2" title="%{repeating_spells_$X_spell-template2}" value="&{template:default}{{name=@{spell-name}}}{{Rango=@{spell-range}}}{{Area=@{spell-aoe}}}{{Presición=[[(@{armas}+@{acct}+@{accs})d10k@{acck}!!+@{acck_flat}+@{spell-presi}]]}}{{Daño=[[[[@{armati}+@{dmgt}+@{dmgs}+@{spell-damaget}]]d10k[[@{dmgk}+@{spell-damage}]]!!]]}}{{Daño Fijo=[[@{spell-damage-fijo}+@{dmgk_flat}]]}}{{Curación=[[[[@{spelltir}+@{spell-healingt}]]d10k[[@{spellheal}+@{spell-healing}}]]!!]]}}{{Curación Fija=[[@{spell-healing-fijo}+@{hechiceria_flat}+@{spellheal_flat}]]}}{{Objetivos=@{spell-target}}}{{Duración=@{spell-duration}}}{{Elemento=@{spell-damage-type}}}{{Efecto=@{spell-effect}}}"><label>Skill</label></button>
+  <button type="roll" class="buttonstyleh3" name="roll_spell-template3" title="%{repeating_spells_$X_spell-template3}" value="&{template:default}{{name=@{spell-name}}}{{Rango=@{spell-range}}}{{Area=@{spell-aoe}}}{{Presición=[[@{spell-acc}d10k@{spell-acc2}!!+@{acck_flat}+@{spell-presi}]]}}{{Daño=[[@{spell-otro}d10k@{spell-otro2}!!]]}}{{Daño Fijo=[[@{spell-damage-fijo}+@{dmgk_flat}]]}}{{Curación=[[@{spell-otro}d10k@{spell-otro2}!!]]}}{{Curación Fija=[[@{spell-healing-fijo}+@{hechiceria_flat}+@{spellheal_flat}]]}}{{Objetivos=@{spell-target}}}{{Duración=@{spell-duration}}}{{Elemento=@{spell-damage-type}}}{{Efecto=@{spell-effect}}}"><label>Otro</label></button>
+  <button type="roll" class="buttonstyleh4" name="roll_spell-cast" title="%{repeating_spells_$X_spell-cast}" value="&{template:default}{{name=@{spell-name}}}{{Rango=@{spell-range}}}{{Area=@{spell-aoe}}}{{Objetivos=@{spell-target}}}{{Duración=@{spell-duration}}}{{Elemento=@{spell-damage-type}}}{{{Efecto=@{spell-effect}}}" style="margin-bottom: 5px"><label>Mostrar Efecto</label></button>
+</div>
+</div>                
+<input type="checkbox" class="show-spell-hack" title="Show spell details" placeholder="}"/>
+<div class="spell-details2">
+<div class="spell-details">
+  <label class="show-spell-hack">Detalles del Hechizo</label>
+<div class="spelldmgdice">Daño:<input type="number" name="attr_spell-damage" value="0" title="@{repeating_spells_$X_spell-damage}" placeholder="0">
+</div><div class="spelldmgdicet">Daño Tirada:<input type="number" name="attr_spell-damaget" value="0" title="@{repeating_spells_$X_spell-damaget}" placeholder="0">
+</div><div class="spelldmgstatic">Daño Fijo:<input type="number" name="attr_spell-damage-fijo" value="0" title="@{repeating_spells_$X_spell-damage-fijo}" placeholder="0">
+  </div><div class="spellhealdice">Curación:<input type="number" name="attr_spell-healing" value="0" title="@{repeating_spells_$X_spell-healing}" placeholder="0">
+  </div><div class="spellhealdicet">Curación Tirada:<input type="number" name="attr_spell-healingt" value="0" title="@{repeating_spells_$X_spell-healingt}" placeholder="0">
+  </div><div class="spellhealstatic">Curación Fija:<input type="number" name="attr_spell-healing-fijo" value="0" title="@{repeating_spells_$X_spell-healing-fijo}" placeholder="0">
+  </div><div class="spellrange">Rango:<input type="text" name="attr_spell-range" title="@{repeating_spells_$X_spell-range}" placeholder="Rango">
+</div><div class="spelltarget">Objetivos:<input type="text" name="attr_spell-target" title="@{repeating_spells_$X_spell-target}" placeholder="Objetivos">
+</div><div class="spellarea">Area:<input type="text" name="attr_spell-aoe" title="@{repeating_spells_$X_spell-aoe}" placeholder="Area">
+</div><div class="spellduration">Duración:<input type="text" name="attr_spell-duration" title="@{repeating_spells_$X_spell-duration}" placeholder="Duración">
+</div><div class="spellelement">Elemento:<input type="text"  name="attr_spell-damage-type" title="@{repeating_spells_$X_spell-damage-type}" placeholder="Elemento">
+</div><div class="spellpresi">Presición:<input type="number" name="attr_spell-presi" title="@{repeating_spells_$X_spell-presi}" placeholder=" ">
+  </div><div class="spellacc">ACC T:<input type="number" name="attr_spell-acc" title="@{repeating_spells_$X_spell-acc}">
+</div><div class="spellacc2">ACC G:<input type="number" name="attr_spell-acc2" title="@{repeating_spells_$X_spell-acc2}">
+</div>                    
+                    <div class="spellotro">DMG/Heal T:<input type="number" name="attr_spell-otro" title="@{repeating_spells_$X_spell-otro}">
+                      </div>
+                      <div class="spellotro2">DMG/Heal G:<input type="number" name="attr_spell-otro2" title="@{repeating_spells_$X_spell-otro2}">
+                      </div>
+                  <textarea name="attr_spell-effect" class="spelleffect" title="@{repeating_spells_$X_spell-effect}" placeholder="Inserte efecto del hechizo o skills, si lo posee" style="margin: 0; height: 60px"></textarea>
+            </div>
+          </div>
+        </fieldset>
+    </div>
+
+  <div class="todobuff">
+<label>Buffs</label>
+<fieldset class="repeating_buffs">
+    <div class="buff">
+      <input class="buff_nombreb" type="text" name="attr_buff_nombre" placeholder="Origen/Valor del Buff" >
+        <select name="attr_buff_stat">
+          <option value="-" selected>(Elegir)</option>
+          <option value="fuerza">Fuerza</option>
+          <option value="fuerza_tirada">Fuerza Tirada</option>
+          <option value="fuerza_flat">Fuerza Fijo</option>
+          <option value="destreza">Destreza</option>
+          <option value="destreza_tirada">Destreza Tirada</option>
+          <option value="destreza_flat">Destreza Fijo</option>
+          <option value="constitucion">Constitución</option>
+          <option value="constitucion_tirada">Constitución Tirada</option>
+          <option value="constitucion_flat">Constitución Fijo</option>
+          <option value="entendimiento">Entendimiento</option>
+          <option value="entendimiento_tirada">Entendimiento Tirada</option>
+          <option value="entendimiento_flat">Entendimiento Fijo</option>
+          <option value="fe">Fe</option>
+          <option value="fe_tirada">Fe Tirada</option>
+          <option value="fe_flat">Fe Fijo</option>
+          <option value="bravura">Bravura</option>
+          <option value="bravura_tirada">Bravura Tirada</option>
+          <option value="bravura_flat">Bravura Fijo</option>
+          <option value="carisma">Carisma</option>
+          <option value="carisma_tirada">Carisma Tirada</option>
+          <option value="carisma_flat">Carisma Fijo</option>
+          <option value="academicismo">Academicismo</option>
+          <option value="academisismo_flat">Academicismo Fijo</option>    
+            <option value="alerta">Alerta</option>
+            <option value="alerta_flat">Alerta Fijo</option>
+            <option value="alquimia">Alquimia</option>
+            <option value="alquimia_flat">Alquimia Fijo</option>
+            <option value="armas">Armas</option>
+            <option value="armas_flat">Armas Fijo</option>
+            <option value="atletismo">Atletismo</option>
+            <option value="atletismo_flat">Atletismo Fijo</option>
+            <option value="batalla">Batalla</option>
+            <option value="batalla_flat">Batalla Fijo</option>
+            <option value="cocina">Cocina</option>
+            <option value="cocina_flat">Cocina Fijo</option>
+            <option value="comercio">Comercio</option>
+            <option value="comercio_flat">Comercio Fijo</option>
+            <option value="concentracion">Concentración</option>
+            <option value="concentracion_flat">Concentración Fijo</option>
+            <option value="conducir">Conducir</option>
+            <option value="conducir_flat">Conducir Fijo</option>
+            <option value="cultura">Cultura</option>
+            <option value="cultura_flat">Cultura Fijo</option>
+            <option value="defensa">Defensa</option>
+            <option value="defensa_flat">Defensa Fijo</option>
+            <option value="empatia">Empatia</option>
+            <option value="empatia_flat">Empatia Fijo</option>
+            <option value="equitacion">Equitación</option>
+            <option value="equitacion_flat">Equitación Fijo</option>
+            <option value="etiqueta">Etiqueta</option>
+            <option value="etiqueta_flat">Etiqueta Fijo</option>
+            <option value="hechiceria">Hechiceria</option>
+            <option value="hechiceria_flat">Hechiceria Fijo</option>
+            <option value="herreria">Herreria</option>
+            <option value="herreria_flat">Herreria Fijo</option>
+            <option value="informatica">Informática</option>
+            <option value="informatica_flat">Informática Fijo</option>
+            <option value="interpretacion">Interpretación</option>
+            <option value="interpretacion_flat">Interpretación Fijo</option>
+            <option value="intimidacion">Intimidación</option>
+            <option value="intimidacion_flat">Intimidación Fijo</option>
+            <option value="investigacion">Investigación</option>
+            <option value="investigacion_flat">Investigación Fijo</option>
+            <option value="liderazgo">Liderazgo</option>
+            <option value="liderazgo_flat">Liderazgo Fijo</option>
+            <option value="linguistica">Lingüística</option>
+            <option value="linguistica_flat">Lingüística Fijo</option>
+            <option value="mecanica">Mecanica</option>
+            <option value="mecanica_flat">Mecanica Fijo</option>
+            <option value="medicina">Medicina</option>
+            <option value="medicina_flat">Medicina Fijo</option>
+            <option value="ocultismo">Ocultismo</option>
+            <option value="ocultismo_flat">Ocultismo Fijo</option>
+            <option value="pericias">Pericias</option>
+            <option value="pericias_flat">Pericias Fijo</option>
+            <option value="sigilo">Sigilo</option>
+            <option value="sigilo_flat">Sigilo Fijo</option>
+            <option value="subterfugio">Subterfugio</option>
+            <option value="subterfugio_flat">Subterfugio Fijo</option>
+            <option value="supervivencia">Supervivencia</option>
+            <option value="supervivencia_flat">Supervivencia Fijo</option>
+            <option value="teologia">Teologia</option>
+            <option value="teologia_flat">Teologia Fijo</option>
+            <option value="tratoani">Trato con Animales</option>
+            <option value="tratoani_flat">Trato con Animales Fijo</option>
+            <option value="veneno">Venenos</option>
+            <option value="veneno_flat">Venenos Fijo</option>
+            <option value="acct">Presición Tirada</option>
+            <option value="acck">Presición Guardada</option>
+            <option value="acck_flat">Presición Fisica Fija</option>
+            <option value="dmgt">Daño Fisico Tirado</option>
+            <option value="dmgk">Daño Fisico Guardado</option>
+            <option value="dmgk_flat">Daño Fisico Fijo</option>
+            <option value="spelltir">Daño Magico Tirado</option>
+            <option value="spelldamage">Daño Magico Guardado</option>
+            <option value="spellheal">Curación Magica Guardada</option>
+            <option value="spelldamage_flat">Daño Magico Fijo</option>     
+            <option value="spellheal_flat">Curación Magica Fija</option>     
+              <option value="hp">Vida por Nivel</option>
+              <option value="mp">Mana por Nivel</option>
+              <option value="ep">Energía por Nivel</option>
+              <option value="hptot">Vida Total</option>
+              <option value="mptot">Mana Total</option>
+              <option value="eptot">Energía Total</option>
+              <option value="cuerpo">Cuerpo Total</option>
+              <option value="cuerpo_flat">Cuerpo Fijo</option>
+              <option value="mente">Mente Total</option>
+              <option value="mente_flat">Mente Fijo</option>
+              <option value="espiritu">Espíritu Total</option>
+              <option value="espiritu_flat">Espíritu Fijo</option>
+              <option value="evasion">Evasión</option>
+              <option value="armadura">Armadura</option>
+              <option value="resistencia">Resistencia Magica</option>
+              <option value="init">Iniciativa Tirada</option>
+              <option value="inik">Iniciativa Guardado</option>
+              <option value="init_flat">Iniciativa Fijo</option>
+              <option value="movimiento">Movimiento</option>   
+              <option value="conocimiento_flat">Conocimiento Fijo</option>
+              <option value="social_flat">Sociales Fijo</option>
+              <option value="proezas_flat">Proezas Fijo</option>
+        </select>
+        <input class="bonusvalue" type="number" name="attr_buff_bonus" value="1">
+        <textarea type="text" class="demasdatosbonus" name="attr_demasdatosbonus" placeholder="Demas datos del buff entran aqui"></textarea>
+        <input type="checkbox" class="custom-checkbox2" name="attr_buff_active" value="1" checked>
+    </div>
+</fieldset>
+</div>
+
+<div class="notasc">
+<textarea type="text" name="attr_notasdecombateee" placeholder="Notas sobre tu forma de combate"></textarea>
+</div>
+
+</div>
+</div>
+
+<!--Objetos y Notas-->
+<div class="sheet-objetosydatos">
+  <div class="stat-dinero"><label>Dinero</label><input type="number" name="attr_dinero" placeholder="$100.00"/></div>
+  <div class="itemstodo">
+    <div class="stat-historia"><label>Historia</label><textarea spellcheck="false" name="attr_historia"></textarea></div>
+    <div class="stat-personajes"><label>Personajes</label><textarea spellcheck="false" name="attr_personajes"></textarea></div>
+    <div class="stat-lugares"><input type="text" name="attr_extrasx"><textarea spellcheck="false" name="attr_lugares"></textarea></div>
+    <div class="stat-notasi"><label>Demas Notas</label><textarea spellcheck="false" name="attr_notasi"></textarea></div>
+    <div class="stat-consumibles"><label>Consumibles</label><textarea spellcheck="false" name="attr_consumibles"></textarea></div>
+    <div class="stat-objetos"><label>Objetos Magicos</label><textarea spellcheck="false" name="attr_objmagicos"></textarea></div>
+    <div class="stat-equiponoe"><label>Armas y Armaduras</label><textarea spellcheck="false" name="attr_equiponoequipado"></textarea></div>
+    <div class="stat-ropa"><label>Ropa y Atuendos</label><textarea spellcheck="false" name="attr_ropa"></textarea></div>
+    <div class="stat-libros"><label>Libros y Pergaminos</label><textarea spellcheck="false" name="attr_libros"></textarea></div>
+    <div class="stat-personales"><label>Objetos Personales</label><textarea spellcheck="false" name="attr_objpersonales"></textarea></div>
+    <div class="stat-etc"><label>Demas Posesiones</label><textarea spellcheck="false" name="attr_etc"></textarea></div>
+  </div>
+
+
+<label>Notas</label>
+<div class="sss-notas">
+<textarea name="attr_notas"></textarea>
+  </div>
+</div>
+
+<!--Hoja de Bonus-->
+<div class="sheet-extras">
+  <div class="bonusulti">
+
+<label>Beneficios de Raza y Trasfondos</label>
+<fieldset class="repeating_talents">
+  <div class="talents">
+  <input type="text" class="talentname" name="attr_talents_nombre"  placeholder="Origen/Valor del Bonus" >
+        <select class="talentstatbonus" name="attr_talent_stat">
+          <option value="-" selected>(Elegir)</option>
+          <option value="fuerza">Fuerza</option>
+          <option value="fuerza_tirada">Fuerza Tirada</option>
+          <option value="fuerza_flat">Fuerza Fijo</option>
+          <option value="destreza">Destreza</option>
+          <option value="destreza_tirada">Destreza Tirada</option>
+          <option value="destreza_flat">Destreza Fijo</option>
+          <option value="constitucion">Constitución</option>
+          <option value="constitucion_tirada">Constitución Tirada</option>
+          <option value="constitucion_flat">Constitución Fijo</option>
+          <option value="entendimiento">Entendimiento</option>
+          <option value="entendimiento_tirada">Entendimiento Tirada</option>
+          <option value="entendimiento_flat">Entendimiento Fijo</option>
+          <option value="fe">Fe</option>
+          <option value="fe_tirada">Fe Tirada</option>
+          <option value="fe_flat">Fe Fijo</option>
+          <option value="bravura">Bravura</option>
+          <option value="bravura_tirada">Bravura Tirada</option>
+          <option value="bravura_flat">Bravura Fijo</option>
+          <option value="carisma">Carisma</option>
+          <option value="carisma_tirada">Carisma Tirada</option>
+          <option value="carisma_flat">Carisma Fijo</option>
+          <option value="academicismo">Academicismo</option>
+          <option value="academisismo_flat">Academicismo Fijo</option>    
+            <option value="alerta">Alerta</option>
+            <option value="alerta_flat">Alerta Fijo</option>
+            <option value="alquimia">Alquimia</option>
+            <option value="alquimia_flat">Alquimia Fijo</option>
+            <option value="armas">Armas</option>
+            <option value="armas_flat">Armas Fijo</option>
+            <option value="atletismo">Atletismo</option>
+            <option value="atletismo_flat">Atletismo Fijo</option>
+            <option value="batalla">Batalla</option>
+            <option value="batalla_flat">Batalla Fijo</option>
+            <option value="cocina">Cocina</option>
+            <option value="cocina_flat">Cocina Fijo</option>
+            <option value="comercio">Comercio</option>
+            <option value="comercio_flat">Comercio Fijo</option>
+            <option value="concentracion">Concentración</option>
+            <option value="concentracion_flat">Concentración Fijo</option>
+            <option value="conducir">Conducir</option>
+            <option value="conducir_flat">Conducir Fijo</option>
+            <option value="cultura">Cultura</option>
+            <option value="cultura_flat">Cultura Fijo</option>
+            <option value="defensa">Defensa</option>
+            <option value="defensa_flat">Defensa Fijo</option>
+            <option value="empatia">Empatia</option>
+            <option value="empatia_flat">Empatia Fijo</option>
+            <option value="equitacion">Equitación</option>
+            <option value="equitacion_flat">Equitación Fijo</option>
+            <option value="etiqueta">Etiqueta</option>
+            <option value="etiqueta_flat">Etiqueta Fijo</option>
+            <option value="hechiceria">Hechiceria</option>
+            <option value="hechiceria_flat">Hechiceria Fijo</option>
+            <option value="herreria">Herreria</option>
+            <option value="herreria_flat">Herreria Fijo</option>
+            <option value="informatica">Informática</option>
+            <option value="informatica_flat">Informática Fijo</option>
+            <option value="interpretacion">Interpretación</option>
+            <option value="interpretacion_flat">Interpretación Fijo</option>
+            <option value="intimidacion">Intimidación</option>
+            <option value="intimidacion_flat">Intimidación Fijo</option>
+            <option value="investigacion">Investigación</option>
+            <option value="investigacion_flat">Investigación Fijo</option>
+            <option value="liderazgo">Liderazgo</option>
+            <option value="liderazgo_flat">Liderazgo Fijo</option>
+            <option value="linguistica">Lingüística</option>
+            <option value="linguistica_flat">Lingüística Fijo</option>
+            <option value="mecanica">Mecanica</option>
+            <option value="mecanica_flat">Mecanica Fijo</option>
+            <option value="medicina">Medicina</option>
+            <option value="medicina_flat">Medicina Fijo</option>
+            <option value="ocultismo">Ocultismo</option>
+            <option value="ocultismo_flat">Ocultismo Fijo</option>
+            <option value="pericias">Pericias</option>
+            <option value="pericias_flat">Pericias Fijo</option>
+            <option value="sigilo">Sigilo</option>
+            <option value="sigilo_flat">Sigilo Fijo</option>
+            <option value="subterfugio">Subterfugio</option>
+            <option value="subterfugio_flat">Subterfugio Fijo</option>
+            <option value="supervivencia">Supervivencia</option>
+            <option value="supervivencia_flat">Supervivencia Fijo</option>
+            <option value="teologia">Teologia</option>
+            <option value="teologia_flat">Teologia Fijo</option>
+            <option value="tratoani">Trato con Animales</option>
+            <option value="tratoani_flat">Trato con Animales Fijo</option>
+            <option value="veneno">Venenos</option>
+            <option value="veneno_flat">Venenos Fijo</option>
+            <option value="acct">Presición Tirada</option>
+            <option value="acck">Presición Guardada</option>
+            <option value="acck_flat">Presición Fisica Fija</option>
+            <option value="dmgt">Daño Fisico Tirado</option>
+            <option value="dmgk">Daño Fisico Guardado</option>
+            <option value="dmgk_flat">Daño Fisico Fijo</option>
+            <option value="spelltir">Daño Magico Tirado</option>
+            <option value="spelldamage">Daño Magico Guardado</option>
+            <option value="spellheal">Curación Magica Guardada</option>
+            <option value="spelldamage_flat">Daño Magico Fijo</option>     
+            <option value="spellheal_flat">Curación Magica Fija</option>     
+              <option value="hp">Vida por Nivel</option>
+              <option value="mp">Mana por Nivel</option>
+              <option value="ep">Energía por Nivel</option>
+              <option value="hptot">Vida Total</option>
+              <option value="mptot">Mana Total</option>
+              <option value="eptot">Energía Total</option>
+              <option value="cuerpo">Cuerpo Total</option>
+              <option value="cuerpo_flat">Cuerpo Fijo</option>
+              <option value="mente">Mente Total</option>
+              <option value="mente_flat">Mente Fijo</option>
+              <option value="espiritu">Espíritu Total</option>
+              <option value="espiritu_flat">Espíritu Fijo</option>
+              <option value="evasion">Evasión</option>
+              <option value="armadura">Armadura</option>
+              <option value="resistencia">Resistencia Magica</option>
+              <option value="init">Iniciativa Tirada</option>
+              <option value="inik">Iniciativa Guardado</option>
+              <option value="init_flat">Iniciativa Fijo</option>
+              <option value="movimiento">Movimiento</option>   
+              <option value="conocimiento_flat">Conocimiento Fijo</option>
+              <option value="social_flat">Sociales Fijo</option>
+              <option value="proezas_flat">Proezas Fijo</option>
+        </select>
+        <input type="number" class="bonustalento" name="attr_talent_bonus" value="1">
+        <input type="checkbox" name="attr_talent_active" value="1" checked>
+    </div>
+</fieldset>
+</div>
+</div>
+
+<!-- ---------------------------SHEET WORKERS----------------- -->
+
+<script type="text/worker">
+
+  //Paginas
+  const buttonlist = ["personajep","trasfondosyt","hojacombate","objetosydatos","extras"];
+  buttonlist.forEach(button => {
+      on(`clicked:${button}`, function() {
+          setAttrs({
+              sheetTab: button
+          });
+      });
+  });
+
+
+  //Estadisticas y Habilidades van aca
+  const stats = ["fuerza","destreza","constitucion","entendimiento","fe","bravura","carisma","academicismo","alerta","alquimia","arma","armas","atletismo","batalla","cocina","comercio","concentracion","conducir","cultura","defensa","empatia","equitacion","etiqueta","hechiceria","herreria","informatica","interpretacion","intimidacion","investigacion","liderazgo","linguistica","mecanica","medicina","ocultismo","pericias","sigilo","subterfugio","supervivencia","teologia","tratoani","veneno","evasion","armadura","resistencia","cuerpo","mente","espiritu","hp","mp","ep","hptot","mptot","eptot","acct","acck","dmgt","dmgk","armati","armake","init","inik","init_flat","spelltir","spelldamage","skilldamage","fuerza_flat","destreza_flat","constitucion_flat","entendimiento_flat","fe_flat","bravura_flat","carisma_flat","academicismo_flat","alerta_flat","alquimia_flat","armas_flat","atletismo_flat","batalla_flat","cocina_flat","comercio_flat","concentracion_flat","conducir_flat","cultura_flat","defensa_flat","empatia_flat","equitacion_flat","etiqueta_flat","hechiceria_flat","herreria_flat","informatica_flat","interpretacion_flat","intimidacion_flat","investigacion_flat","liderazgo_flat","linguistica_flat","mecanica_flat","medicina_flat","ocultismo_flat","pericias_flat","sigilo_flat","subterfugio_flat","supervivencia_flat","teologia_flat","tratoani_flat","veneno_flat","acck_flat","dmgk_flat","init_flat","spelldamage_flat","skilldamage_flat","spellheal","spellheal_flat","movimiento","notasdecombate","demasdatosequipo","demasdatosbonus","conocimiento_flat","social_flat","cuerpo_flat","mente_flat","social_flat","proezas_flat","bravura_tirada","fuerza_tirada","destreza_tirada","constitucion_tirada","fe_tirada","entendimiento_tirada","carisma_tirada"];
+  const sections = ["talent", "buff", "item"];
+  const useModifier = 0;
+  
+
+
+//Funciones que establecen las secciones y sus contenidos
+  const sectionFieldName = (section, field, id = "") => `repeating_${section}s${id ? `_${id}_` : ":"}${section}_${field}`;
+  const sectionFields = ["stat", "bonus", "active"];
+  const buildSectionChanges = (section, fields) => fields.reduce((a, field) => `${a} change:${sectionFieldName(section,field)}`, `remove:repeating_${section}s sheet:opened`);
+  
+  
+//Un loop que establece estadisticas para cada sheetworker
+  stats.forEach(stat => {
+      on(`change:${stat}_base ${sections.reduce((a, section) => `${a} change:${stat}_${section}`, "")} sheet:opened`, () => {
+          getAttrs([`${stat}_base`, ...sections.map(section => `${stat}_${section}`)], values => {
+              const stat_values = Object.values(values);
+              const output = {};
+              output[stat] = stat_values.reduce((a, b) => (+a || 0) + (+b || 0), 0);
+              if(useModifier) {
+                  output[`${stat}_modifier`] = sections.reduce((a, section_name) => a + (+values[`${stat}_${section_name}`] || 0), 0);
+              }
+              
+           setAttrs(output);
+       });
+      });
+  });
+  
+//Worker que se encarga de aplicar los bonus y modificadores extras que las cosas usan
+sections.forEach(section => {
+  on(buildSectionChanges(section, sectionFields), () => {
+      //Chequea que las secciones repetidas esten en orden
+      getSectionIDs(`repeating_${section}s`, idarray => {
+          const fieldnames = [];
+          idarray.forEach(id => sectionFields.forEach(field => fieldnames.push(sectionFieldName(section, field, id))));
+  
+          getAttrs([...fieldnames], values => {
+              const output = {};
+              // set the base for each talwnt bonus to 0
+              stats.forEach(stat => output[`${stat}_${section}`] = 0);
+              
+              //Loopea a las cosas que necesitan incremento
+              idarray.forEach(id => {
+                  const which = values[sectionFieldName(section, "stat", id)];
+                  const bonus = +values[sectionFieldName(section, "bonus", id)] || 0;
+                  const active = +values[sectionFieldName(section, "active", id)] || 0;
+                  if(active && stats.includes(which)) {
+                      output[`${which}_${section}`] = output[`${which}_${section}`] + bonus;
+                  }
+              });
+              setAttrs(output);
+          });
+      });
+  });
+});
+
+
+//Funciones que definen los hechizos
+    function recursiveSpellSum(tail, acc, oldField, newField, resultFieldName) {
+    
+        let head = tail.shift();
+        if (head === undefined) {
+            console.log(`Summing ended. Final sum is ${acc}`);
+            console.timeEnd("Summing time");
+            setAttrs({
+                [resultFieldName] : acc
+            });
+            return;
+        }
+    
+        let repeatingName;
+        let fieldName;
+        if (isNewSpellSection(head)) {
+            repeatingName = `spells-${head}`
+            fieldName = newField;
+        } else {
+            repeatingName = `spells${head}`
+            fieldName = `${oldField}${head}`
+        }
+    
+        console.timeLog("Summing time");
+    
+        TAS.repeating(repeatingName)
+            .fields(fieldName)
+            .each(function (r) {
+                acc += (r.I[fieldName]);
+                console.log(`Recursion ${repeatingName} updated sum to ${acc}`);
+            })
+            .execute(() => recursiveSpellSum(tail, acc, oldField, newField, resultFieldName)); // Fat arrow function to lazy load value.
+    }
+    
+    function setupSpellSumming(sections, oldField, newField, resultFieldName) {
+        sections.forEach(section => {
+            let repeatingName;
+            let fieldName;
+            if (isNewSpellSection(section)) {
+                repeatingName = `spells-${section}`
+                fieldName = newField;
+            } else {
+                repeatingName = `spells${section}`
+                fieldName = `${oldField}${section}`
+            }
+    
+            let onChange = `change:repeating_${repeatingName}:${fieldName} remove:repeating_${repeatingName}`;
+            on(onChange, function () {
+    
+                console.log(`Summing started by section ${repeatingName}`);
+                console.time("Summing time");
+                let levelsCopy = [...sections];
+                let accumulator = 0;
+    
+                recursiveSpellSum(levelsCopy, accumulator, oldField, newField, resultFieldName);
+            });
+        });
+    }
+    
+    function setupAutoFillSpellInfo(section, spellsTable) {
+        if (spellsTable[section]) {
+            on(`change:repeating_spells-${section}:spell-select`, function(eventInfo){
+    
+                let spell = spellsTable[section][eventInfo.newValue];
+                if (spell === undefined)
+                    return;
+    
+                let spellInfo ={
+                    [`repeating_spells-${section}_spell-name`]         : spell["name"],
+                    [`repeating_spells-${section}_spell-target`]    : spell["target"],
+                    [`repeating_spells-${section}_spell-acc`]   : spell["acc"],
+                    [`repeating_spells-${section}_spell-acc2`]   : spell["acc2"],
+                    [`repeating_spells-${section}_spell-range`]        : spell["range"],
+                    [`repeating_spells-${section}_spell-aoe`]          : spell["aoe"],
+                    [`repeating_spells-${section}_spell-duration`]     : spell["duration"],
+                    [`repeating_spells-${section}_spell-presi`]   : spell["presi"],
+                    [`repeating_spells-${section}_spell-damage`]       : spell["damage"],
+                    [`repeating_spells-${section}_spell-damaget`]       : spell["damaget"],
+                    [`repeating_spells-${section}_spell-damage-fijo`]       : spell["damage-fijo"],
+                    [`repeating_spells-${section}_spell-damage-type`]  : spell["damage-type"],
+                    [`repeating_spells-${section}_spell-healing`]      : spell["healing"],
+                    [`repeating_spells-${section}_spell-healingt`]      : spell["healingt"],
+                    [`repeating_spells-${section}_spell-healing-fijo`]      : spell["healing-fijo"],
+                    [`repeating_spells-${section}_spell-otro`]       : spell["spell-otro"],
+                    [`repeating_spells-${section}_spell-otro`]       : spell["spell-otro2"],
+                    [`repeating_spells-${section}_spell-effect`]       : spell["effect"]
+                }
+                if (section.startsWith("pri")) {
+                    spellInfo[`repeating_spells-${section}_spell-sphere`] = spell["sphere"];
+                }
+    
+                setAttrs(spellInfo);
+            });
+        }
+    }
+    
+    function setupCalculateRemaining(totalField, sumField, remainingField) {
+        on(`change:${totalField} change:${sumField}`, function () {
+            getAttrs([totalField, sumField], function (values) {
+                let intTotal = parseInt(values[totalField]);
+                let intSum = parseInt(values[sumField]);
+    
+                console.log(`Setting ${remainingField} with value from ${totalField}: ${intTotal} and ${sumField}: ${intSum}`);
+    
+                setAttrs({
+                    [remainingField]: intTotal - intSum
+                });
+            });
+        });
+    }
+    
+    function setupCalculateTotal(totalField, fieldsToSum) {
+        let onChange = fieldsToSum.map(field => `change:${field}`).join(" ");
+        on(onChange, function () {
+            getAttrs(fieldsToSum, function (values) {
+                let total = 0;
+                fieldsToSum.forEach(field => {
+                    total += parseInt(values[field]) || 0;
+                });
+    
+                console.log(total);
+    
+                setAttrs({
+                    [totalField]: total
+                });
+            });
+        });
+    }
+
+
+//Cuerpo
+on("sheet:opened change:fuerza change:destreza change:constitucion", function() {
+      getAttrs(["fuerza","destreza","constitucion"], function(values) {
+        var output1 = Math.floor((parseInt(values["fuerza"])||1)+(parseInt(values["destreza"])||1)+(parseInt(values["constitucion"])||1));
+          setAttrs({
+        "cuerpo_base": output1
+      });
+  });
+});
+
+//Mente
+on("sheet:opened change:entendimiento change:fe", function() {
+  getAttrs(["fe","entendimiento"], function(values) {
+      var output2 = Math.floor((parseInt(values["fe"])||1)+((parseInt(values["entendimiento"])||1)));
+          setAttrs({
+        "mente_base": output2
+      });
+  });
+});
+
+//Espiritu
+on("sheet:opened change:bravura change:carisma", function() {
+  getAttrs(["bravura","carisma"], function(values) {
+      var output3 = Math.floor(((parseInt(values["carisma"])||1))+((parseInt(values["bravura"])||1)));
+          setAttrs({
+        "espiritu_base": output3
+      });
+  });
+});
+      
+//HP
+on("sheet:opened change:fuerza change:destreza change:constitucion", function() {
+      getAttrs(["fuerza","destreza","constitucion"], function(values) {
+      var output4 = Math.floor(Math.floor((parseInt(values["fuerza"])||0)*0.5)+Math.floor((parseInt(values["destreza"])||0)*0.34)+(parseInt(values["constitucion"])||0)*1+2);
+          setAttrs({
+        "hp_base": output4
+      });
+  });
+});
+
+//HP Total
+on("sheet:opened change:hp", function() {
+      getAttrs(["hp"], function(values) {
+      var output44 = Math.floor((parseInt(values["hp"])||0)*6);
+          setAttrs({
+        "hptot_base": output44
+      });
+  });
+});
+
+on("sheet:opened change:hptot", function() {
+  getAttrs(["hptot"], function(values) {
+  var output45 = parseInt(values["hptot"]);
+      setAttrs({
+    "hptotal_max": output45
+  });
+});
+});
+
+//MP
+on("sheet:opened change:fe change:entendimiento", function() {
+      getAttrs(["entendimiento","fe"], function(values) {
+      var output5 = Math.floor((parseInt(values["entendimiento"])||1)+(parseInt(values["fe"])||1));
+          setAttrs({
+        "mp_base": output5
+      });
+  });
+});
+
+//MP Total
+on("sheet:opened change:mp", function() {
+      getAttrs(["mp"], function(values) {
+      var output55 = Math.floor((parseInt(values["mp"])||0)*6);
+          setAttrs({
+        "mptot_base": output55
+      });
+  });
+});
+
+on("sheet:opened change:mptot", function() {
+  getAttrs(["mptot"], function(values) {
+  var output56 = parseInt(values["mptot"]);
+      setAttrs({
+    "mptotal_max": output56
+  });
+});
+});
+
+
+//EP
+on("sheet:opened change:cuerpo change:bravura change:carisma", function() {
+  getAttrs(["cuerpo","bravura","carisma"], function(values) {
+      var output6 = Math.floor(Math.floor((parseInt(values["cuerpo"])||0)*0.5)+((parseInt(values["carisma"])||1))+((parseInt(values["bravura"])||1)));
+          setAttrs({
+        "ep_base": output6
+      });
+  });
+});
+
+//EP Total
+on("sheet:opened change:ep", function() {
+      getAttrs(["ep"], function(values) {
+      var output66 = Math.floor((parseInt(values["ep"])||0)*6);
+          setAttrs({
+        "eptot_base": output66
+      });
+  });
+});
+
+on("sheet:opened change:eptot", function() {
+  getAttrs(["eptot"], function(values) {
+  var output67 = parseInt(values["eptot"]);
+      setAttrs({
+    "eptotal_max": output67
+  });
+});
+});
+
+
+//Evasion
+  on("sheet:opened change:destreza", function() {
+    getAttrs(["destreza"], function(values) {
+        var output7 = Math.floor((parseInt(values["destreza"])||0)*5);
+            setAttrs({
+          "evasion_base": output7
+        });
+    });
+  });
+
+//Armadura
+  on("sheet:opened change:constitucion", function() {
+    getAttrs(["constitucion"], function(values) {
+        var output8 = Math.floor((parseInt(values["constitucion"])||0)*2);
+            setAttrs({
+          "armadura_base": output8
+        });
+    });
+  });
+
+  //Resistencia magica
+  on("sheet:opened change:fe", function() {
+    getAttrs(["fe"], function(values) {
+        var output9 = Math.floor((parseInt(values["fe"])||0)*1.5);
+            setAttrs({
+          "resistencia_base": output9
+        });
+    });
+  });
+
+  //Presición Guardado
+on("sheet:opened change:armas", function() {
+      getAttrs(["armas"], function(values) {
+      var output10 = Math.floor((parseInt(values["armas"])||0));
+          setAttrs({
+        "acck_base": output10
+      });
+  });
+});
+
+//Daño Fisico Guardado
+on("sheet:opened change:armake", function() {
+      getAttrs(["armake"], function(values) {
+      var output11 = Math.floor((parseInt(values["armake"])||0));
+          setAttrs({
+        "dmgk_base": output11
+      });
+  });
+});
+
+//Daño Magico Tirado Hechizo
+on("sheet:opened change:hechiceria", function() {
+      getAttrs(["hechiceria"], function(values) {
+      var output12 = Math.floor((parseInt(values["hechiceria"])||0));
+          setAttrs({
+        "spelltir_base": output12
+      });
+  });
+});
+
+//Movimiento
+on("sheet:opened change:destreza change:atletismo", function() {
+  getAttrs(["destreza","atletismo"], function(values) {
+  var output13 = Math.max(Math.floor(((parseInt(values["destreza"])||1)+(parseInt(values["atletismo"])||1))/2),4);
+      setAttrs({
+    "movimiento_base": output13
+  });
+});
+});
+
+</script>
